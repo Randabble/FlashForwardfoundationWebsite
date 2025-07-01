@@ -1,0 +1,105 @@
+Prompt:
+
+Design a clean, modern, and engaging nonprofit website for Flash Forward, a student-led organization focused on designing and distributing solar-powered flashlights to children in regions without access to electricity, starting with Ghana. Our mission is to "Light the future, one flashlight at a time." The design should evoke hope, empowerment, and innovation while remaining minimal and accessible.
+
+✅ Website Features:
+1. Hero Section
+
+Full-screen background image of Ghanaian children reading or walking home at sunset.
+
+Headline: "Lighting the Future, One Flashlight at a Time"
+
+Subheadline: "Student-led nonprofit delivering solar-powered light to kids in off-grid communities."
+
+CTA Button: “Donate Now” + “Learn More”
+
+2. About Us Section
+
+Short paragraph about Flash Forward’s mission and origins.
+
+Include the story: founded by high school students in Washington state to bridge educational inequality through sustainable tech.
+
+Add a few icons or graphics for key values: Innovation, Education, Community, Sustainability
+
+3. Our Team Section
+
+Display circular photos + names + short 1-liner bios of all 6 core team members.
+
+Section title: “Meet the Students Behind the Mission”
+
+4. Impact Section
+
+Title: “Why Flashlights?”
+
+Display key stats:
+
+“600M+ students globally lack electricity access”
+
+“Students in off-grid homes study 60% less after sunset”
+
+“Solar lights can add 2–3 hours of study time daily”
+
+Use icons or animated counters for a modern look
+
+5. Technical/Product Section
+
+Title: “What We Build”
+
+Show 3D model or images of the flashlight prototypes
+
+Describe key components: solar panel, battery, switch
+
+Include a short video demo if possible
+
+Mention collaboration with Sammamish High School Builders Club for engineering
+
+6. Blog / Updates Section
+
+Title: “In the Field & Behind the Scenes”
+
+3 preview cards linking to blog articles (ex. “Why Light Matters”, “How We Prototype”, “Ghana Distribution Plans”)
+
+Include a “Read More” button that links to full blog
+
+7. Partnerships Section
+
+Title: “Local Roots, Global Reach”
+
+Show partner logos or name drops (ex: Sammamish High School Builders Club, Thrive Consulting, churches traveling to Malawi, etc.)
+
+Quote or testimonial from a partner if possible
+
+8. Call-to-Action (CTA) Section
+
+Full-width with a bold background (green/blue accent)
+
+Text: “Help us bring safe, sustainable light to students around the world”
+
+Two buttons: “Donate” and “Get Involved”
+
+9. Footer
+
+Dark background with 3 columns:
+
+Column 1: Logo + short mission tagline
+
+Column 2: Quick Links — Home, About, FAQ, Blog, Donate
+
+Column 3: Contact info — Email, Social links (@flashforwardfoundation), City (Bellevue, WA)
+
+Footer Text: “© 2025 Flash Forward Foundation. All rights reserved.”
+
+✅ Bonus Ideas for Functionality:
+Sticky navbar with smooth scroll to each section
+
+Back-to-top button
+
+Mobile responsive design
+
+Simple animation on scroll (e.g., text fades in, images slide up)
+
+FAQ dropdown with 4 key questions
+
+Optional light/dark mode toggle
+
+make it with react and stuff and yeah no other frameworks or complicated css libraries. just basic stuff go ahead now'
