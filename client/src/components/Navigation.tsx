@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'wouter';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,14 +16,18 @@ export default function Navigation() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const headerHeight = 64; // navbar height
-      const targetPosition = element.offsetTop - headerHeight;
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
+    if (location === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerHeight = 64; // navbar height
+        const targetPosition = element.offsetTop - headerHeight;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      window.location.href = `/#${sectionId}`;
     }
     setIsMobileMenuOpen(false);
   };
@@ -45,16 +51,21 @@ export default function Navigation() {
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <button onClick={() => scrollToSection('home')} className="nav-link text-gray-700 hover:text-primary transition-colors duration-200">Home</button>
-              <button onClick={() => scrollToSection('about')} className="nav-link text-gray-700 hover:text-primary transition-colors duration-200">About</button>
-              <button onClick={() => scrollToSection('team')} className="nav-link text-gray-700 hover:text-primary transition-colors duration-200">Team</button>
-              <button onClick={() => scrollToSection('impact')} className="nav-link text-gray-700 hover:text-primary transition-colors duration-200">Impact</button>
-              <button onClick={() => scrollToSection('product')} className="nav-link text-gray-700 hover:text-primary transition-colors duration-200">Product</button>
-              <button onClick={() => scrollToSection('blog')} className="nav-link text-gray-700 hover:text-primary transition-colors duration-200">Blog</button>
-              <button onClick={() => scrollToSection('contact')} className="nav-link text-gray-700 hover:text-primary transition-colors duration-200">Contact</button>
-              <button className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium">
+              <Link href="/"><span className="nav-link text-gray-700 hover:text-primary transition-colors duration-200 cursor-pointer">Home</span></Link>
+              <Link href="/about"><span className="nav-link text-gray-700 hover:text-primary transition-colors duration-200 cursor-pointer">About</span></Link>
+              <Link href="/team"><span className="nav-link text-gray-700 hover:text-primary transition-colors duration-200 cursor-pointer">Team</span></Link>
+              <Link href="/impact"><span className="nav-link text-gray-700 hover:text-primary transition-colors duration-200 cursor-pointer">Impact</span></Link>
+              <Link href="/product"><span className="nav-link text-gray-700 hover:text-primary transition-colors duration-200 cursor-pointer">Product</span></Link>
+              <Link href="/blog"><span className="nav-link text-gray-700 hover:text-primary transition-colors duration-200 cursor-pointer">Blog</span></Link>
+              <Link href="/contact"><span className="nav-link text-gray-700 hover:text-primary transition-colors duration-200 cursor-pointer">Contact</span></Link>
+              <a 
+                href="https://donate.stripe.com/test_your_stripe_link" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium"
+              >
                 Donate Now
-              </button>
+              </a>
             </div>
           </div>
           
@@ -72,17 +83,22 @@ export default function Navigation() {
       {/* Mobile Menu */}
       <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-white border-t border-gray-200`}>
         <div className="px-2 pt-2 pb-3 space-y-1">
-          <button onClick={() => scrollToSection('home')} className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left">Home</button>
-          <button onClick={() => scrollToSection('about')} className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left">About</button>
-          <button onClick={() => scrollToSection('team')} className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left">Team</button>
-          <button onClick={() => scrollToSection('impact')} className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left">Impact</button>
-          <button onClick={() => scrollToSection('product')} className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left">Product</button>
-          <button onClick={() => scrollToSection('blog')} className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left">Blog</button>
-          <button onClick={() => scrollToSection('contact')} className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left">Contact</button>
+          <Link href="/"><div className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>Home</div></Link>
+          <Link href="/about"><div className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>About</div></Link>
+          <Link href="/team"><div className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>Team</div></Link>
+          <Link href="/impact"><div className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>Impact</div></Link>
+          <Link href="/product"><div className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>Product</div></Link>
+          <Link href="/blog"><div className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>Blog</div></Link>
+          <Link href="/contact"><div className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>Contact</div></Link>
           <div className="px-3 py-2">
-            <button className="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium">
+            <a 
+              href="https://donate.stripe.com/test_your_stripe_link" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium block text-center"
+            >
               Donate Now
-            </button>
+            </a>
           </div>
         </div>
       </div>

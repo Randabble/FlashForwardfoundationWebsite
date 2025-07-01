@@ -113,8 +113,25 @@ The application uses a comprehensive component library including:
 - Environment variable support
 
 ## Changelog
-- July 01, 2025. Initial setup
+- July 01, 2025: Initial setup with homepage sections and components
+- July 01, 2025: Added full page routing with About, Team, Impact, Product, Blog, and Contact pages
+- July 01, 2025: Implemented working blog system with individual blog post pages
+- July 01, 2025: Added functional contact form using Formspree integration
+- July 01, 2025: Made all navigation links and buttons functional (donate, contact, etc.)
+- July 01, 2025: Removed newsletter signup section from footer as requested
+
+## Recent Changes
+✓ Created dedicated pages for About, Team, Impact, Product, Blog, and Contact sections
+✓ Implemented blog post routing with individual article pages showing full content
+✓ Added contact form with Formspree integration for form submissions
+✓ Updated all navigation links to route to appropriate pages instead of scroll anchors
+✓ Made all donation buttons link to external donation platform
+✓ Updated "Get Involved" and "Learn More" buttons to link to contact and about pages
+✓ Removed newsletter signup functionality from footer
+✓ Made FAQ section accessible via scroll anchor from any page
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Requested functional pages with working links and interactive elements.
+Contact form integration with Formspree for message handling.

@@ -1,27 +1,21 @@
-import { useState } from 'react';
+import { Link, useLocation } from 'wouter';
 
 export default function Footer() {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-
-  const handleNewsletterSignup = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setIsSubscribed(true);
-      setEmail('');
-      setTimeout(() => setIsSubscribed(false), 2000);
-    }
-  };
+  const [location] = useLocation();
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const headerHeight = 64;
-      const targetPosition = element.offsetTop - headerHeight;
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
+    if (location === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerHeight = 64;
+        const targetPosition = element.offsetTop - headerHeight;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      window.location.href = `/#${sectionId}`;
     }
   };
 
@@ -60,13 +54,13 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-3">
-              <li><button onClick={() => scrollToSection('home')} className="text-gray-300 hover:text-primary transition-colors duration-200">Home</button></li>
-              <li><button onClick={() => scrollToSection('about')} className="text-gray-300 hover:text-primary transition-colors duration-200">About</button></li>
-              <li><button onClick={() => scrollToSection('team')} className="text-gray-300 hover:text-primary transition-colors duration-200">Our Team</button></li>
-              <li><button onClick={() => scrollToSection('impact')} className="text-gray-300 hover:text-primary transition-colors duration-200">Impact</button></li>
-              <li><button onClick={() => scrollToSection('blog')} className="text-gray-300 hover:text-primary transition-colors duration-200">Blog</button></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors duration-200">FAQ</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors duration-200">Donate</a></li>
+              <li><Link href="/"><span className="text-gray-300 hover:text-primary transition-colors duration-200 cursor-pointer">Home</span></Link></li>
+              <li><Link href="/about"><span className="text-gray-300 hover:text-primary transition-colors duration-200 cursor-pointer">About</span></Link></li>
+              <li><Link href="/team"><span className="text-gray-300 hover:text-primary transition-colors duration-200 cursor-pointer">Our Team</span></Link></li>
+              <li><Link href="/impact"><span className="text-gray-300 hover:text-primary transition-colors duration-200 cursor-pointer">Impact</span></Link></li>
+              <li><Link href="/blog"><span className="text-gray-300 hover:text-primary transition-colors duration-200 cursor-pointer">Blog</span></Link></li>
+              <li><button onClick={() => scrollToSection('faq')} className="text-gray-300 hover:text-primary transition-colors duration-200">FAQ</button></li>
+              <li><a href="https://donate.stripe.com/test_your_stripe_link" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary transition-colors duration-200">Donate</a></li>
             </ul>
           </div>
 
@@ -88,28 +82,14 @@ export default function Footer() {
               </div>
             </div>
             
-            {/* Newsletter Signup */}
+            {/* Contact Link */}
             <div className="mt-6">
-              <h4 className="font-semibold mb-2">Stay Updated</h4>
-              <form onSubmit={handleNewsletterSignup} className="flex space-x-2">
-                <input 
-                  type="email" 
-                  placeholder="Your email" 
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-                <button 
-                  type="submit"
-                  className={`px-4 py-2 rounded-lg transition-colors duration-200 ${
-                    isSubscribed 
-                      ? 'bg-green-500 text-white' 
-                      : 'bg-primary text-white hover:bg-primary/90'
-                  }`}
-                >
-                  <i className={`fas ${isSubscribed ? 'fa-check' : 'fa-paper-plane'}`}></i>
+              <Link href="/contact">
+                <button className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium w-full">
+                  <i className="fas fa-envelope mr-2"></i>
+                  Contact Us
                 </button>
-              </form>
+              </Link>
             </div>
           </div>
         </div>

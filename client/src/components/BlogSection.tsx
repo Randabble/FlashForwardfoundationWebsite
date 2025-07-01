@@ -1,4 +1,5 @@
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { Link } from 'wouter';
 
 export default function BlogSection() {
   const titleRef = useScrollAnimation();
@@ -10,6 +11,7 @@ export default function BlogSection() {
 
   const blogPosts = [
     {
+      id: 1,
       title: "Why Light Matters: The Science of After-School Learning",
       category: "Impact",
       date: "Dec 15, 2024",
@@ -18,6 +20,7 @@ export default function BlogSection() {
       categoryColor: "bg-primary/10 text-primary"
     },
     {
+      id: 2,
       title: "How We Prototype: From Idea to Impact",
       category: "Engineering",
       date: "Dec 8, 2024",
@@ -26,6 +29,7 @@ export default function BlogSection() {
       categoryColor: "bg-secondary/10 text-secondary"
     },
     {
+      id: 3,
       title: "Ghana Distribution Plans: Making It Happen",
       category: "Operations",
       date: "Dec 1, 2024",
@@ -67,20 +71,25 @@ export default function BlogSection() {
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
                   {post.excerpt}
                 </p>
-                <button className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors duration-200">
-                  Read More 
-                  <i className="fas fa-arrow-right ml-2 text-sm"></i>
-                </button>
+                <Link href={`/blog/${post.id}`}>
+                  <button className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors duration-200">
+                    Read More 
+                    <i className="fas fa-arrow-right ml-2 text-sm"></i>
+                  </button>
+                </Link>
               </div>
             </article>
           ))}
         </div>
 
         <div ref={buttonRef} className="scroll-fade text-center mt-12">
-          <button className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200">
+          <a 
+            href="/blog"
+            className="inline-flex items-center bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200"
+          >
             <i className="fas fa-newspaper mr-2"></i>
             Read More Stories
-          </button>
+          </a>
         </div>
       </div>
     </section>

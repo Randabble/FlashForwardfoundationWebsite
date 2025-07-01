@@ -16,14 +16,22 @@ export default function CTASection() {
           Your support can light up education and create opportunities for thousands of students in off-grid communities.
         </p>
         <div ref={buttonsRef} className="scroll-fade flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary/90 transform hover:scale-105 transition-all duration-200 shadow-xl">
+          <a 
+            href="https://donate.stripe.com/test_your_stripe_link" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary/90 transform hover:scale-105 transition-all duration-200 shadow-xl text-center"
+          >
             <i className="fas fa-heart mr-2"></i>
             Donate Now
-          </button>
-          <button className="bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-all duration-200">
+          </a>
+          <a 
+            href="/contact"
+            className="bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-all duration-200 text-center"
+          >
             <i className="fas fa-users mr-2"></i>
             Get Involved
-          </button>
+          </a>
         </div>
       </div>
     </section>
