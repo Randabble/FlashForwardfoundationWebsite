@@ -1,243 +1,90 @@
 import { useState } from 'react';
-import { Link, useRoute } from "wouter";
+import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export default function Blog() {
   const titleRef = useScrollAnimation();
-  const descRef = useScrollAnimation();
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   const blogPosts = [
     {
       id: 1,
-      title: "Why Light Matters: The Science of After-School Learning",
-      category: "Impact",
-      date: "Dec 15, 2024",
-      author: "Sofia Rodriguez",
-      readTime: "5 min read",
-      excerpt: "Research shows that adequate lighting can improve reading comprehension by up to 35%. Discover how our solar flashlights are changing educational outcomes in Ghana.",
-      content: `
-        <p>When the sun sets in rural Ghana, something profound happens to education. For millions of students around the world, darkness doesn't just signal the end of the day—it marks the end of learning opportunities.</p>
-        
-        <p>Recent research from the University of California Berkeley has shown that adequate lighting can improve reading comprehension by up to 35% and increase study time by an average of 2.3 hours per day. But what does this mean for students in off-grid communities?</p>
-        
-        <h3>The Science Behind Light and Learning</h3>
-        
-        <p>Our brains are wired to respond to light. The visual cortex, which processes what we see, works in tandem with areas responsible for memory and concentration. When lighting is poor, students struggle with:</p>
-        
-        <ul>
-          <li>Eye strain that leads to fatigue and headaches</li>
-          <li>Reduced reading speed and comprehension</li>
-          <li>Difficulty focusing on detailed work</li>
-          <li>Increased likelihood of making errors</li>
-        </ul>
-        
-        <p>Dr. Sarah Mitchell from Stanford's Education Research Institute explains: "Quality lighting isn't just about being able to see the page. It's about creating an environment where the brain can function optimally for learning."</p>
-        
-        <h3>What We're Seeing in Ghana</h3>
-        
-        <p>Our preliminary studies in partner communities show remarkable results. Students with access to our solar flashlights report:</p>
-        
-        <ul>
-          <li>43% increase in homework completion rates</li>
-          <li>28% improvement in test scores</li>
-          <li>Better attendance in morning classes (less fatigue)</li>
-          <li>Increased confidence in academic abilities</li>
-        </ul>
-        
-        <p>But the impact goes beyond academics. Parents report that their children are more engaged with learning, more curious about the world, and more optimistic about their futures.</p>
-        
-        <h3>The Ripple Effect</h3>
-        
-        <p>Education transforms communities. When students can study effectively after dark, they're more likely to complete their education, pursue higher learning, and become community leaders. This creates a positive cycle that lifts entire regions out of poverty.</p>
-        
-        <p>Our solar flashlights are just the beginning. We're not just providing light—we're illuminating pathways to better futures for millions of young people around the world.</p>
-      `,
-      image: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
-      categoryColor: "bg-primary/10 text-primary"
+      title: "Breaking the Cycle: How Energy Poverty Affects Education",
+      category: "Research",
+      date: "Dec 20, 2024",
+      author: "Maya Patel",
+      readTime: "7 min read",
+      excerpt: "Over 685 million people live without access to electricity. Discover how energy poverty creates barriers to education and what we're doing to break this cycle.",
+      image: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      featured: true
     },
     {
       id: 2,
-      title: "How We Prototype: From Idea to Impact",
-      category: "Engineering",
-      date: "Dec 8, 2024",
-      author: "Maya Patel",
-      readTime: "7 min read",
-      excerpt: "Take a behind-the-scenes look at our design process, from initial sketches to 3D printing prototypes in the Sammamish High School Builders Club.",
-      content: `
-        <p>Every great product starts with a problem. For Flash Forward, that problem was clear: millions of students around the world can't study after sunset because they don't have access to electricity. But turning that problem into a solution? That's where the real work begins.</p>
-        
-        <h3>Phase 1: Research and Understanding</h3>
-        
-        <p>Before we touched a single tool, we spent months researching. We interviewed teachers, students, and parents in off-grid communities. We learned about their daily routines, their challenges, and their dreams for their children's education.</p>
-        
-        <p>Key insights from our research:</p>
-        <ul>
-          <li>Students needed portable, reliable light sources</li>
-          <li>Cost was a major barrier—families couldn't afford expensive solutions</li>
-          <li>Durability was crucial—devices needed to withstand daily use by children</li>
-          <li>Safety was paramount—no open flames or toxic materials</li>
-        </ul>
-        
-        <h3>Phase 2: Initial Design</h3>
-        
-        <p>Armed with real user needs, we began sketching. Our first designs were simple: a solar panel, a battery, and LEDs. But the devil, as they say, is in the details.</p>
-        
-        <p>We had to consider:</p>
-        <ul>
-          <li>How to make the device affordable while maintaining quality</li>
-          <li>How to ensure consistent light output as the battery depleted</li>
-          <li>How to make charging intuitive for users of all ages</li>
-          <li>How to balance portability with solar panel efficiency</li>
-        </ul>
-        
-        <h3>Phase 3: Prototyping at Sammamish High</h3>
-        
-        <p>This is where our partnership with the Sammamish High School Builders Club became invaluable. With access to 3D printers, laser cutters, and electronic prototyping equipment, we could rapidly iterate on our designs.</p>
-        
-        <p>Our first prototype was... well, let's just say it was a learning experience. The solar panel was too small, the housing was fragile, and the light was too dim. But failure is just data in disguise.</p>
-        
-        <h3>Phase 4: Testing and Refinement</h3>
-        
-        <p>We tested each prototype rigorously. We dropped them, soaked them, left them in direct sunlight for days, and had dozens of students use them in real-world conditions.</p>
-        
-        <p>Version 7 was our breakthrough. It featured:</p>
-        <ul>
-          <li>A foldable solar panel that maximized charging efficiency</li>
-          <li>A robust ABS plastic housing that could survive drops</li>
-          <li>Three brightness settings to conserve battery life</li>
-          <li>LED indicators showing battery level and charging status</li>
-        </ul>
-        
-        <h3>Phase 5: Field Testing</h3>
-        
-        <p>No amount of lab testing can replace real-world use. We sent prototypes to our partner communities in Ghana and anxiously waited for feedback.</p>
-        
-        <p>The response was incredible. Students loved the adjustable brightness, parents appreciated the safety features, and teachers noticed improved study habits. But we also received valuable suggestions for improvements that led to our current design.</p>
-        
-        <h3>What's Next?</h3>
-        
-        <p>We're never done improving. Even as we prepare for our first large-scale distribution, we're working on version 2.0. Features under development include:</p>
-        <ul>
-          <li>USB charging capability for small devices</li>
-          <li>Improved water resistance</li>
-          <li>Even longer battery life</li>
-          <li>Modular design for easier repairs</li>
-        </ul>
-        
-        <p>Engineering isn't just about technical specifications—it's about understanding human needs and creating solutions that work in the real world. Every prototype, every test, every iteration brings us closer to our goal: lighting up education for every student, everywhere.</p>
-      `,
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
-      categoryColor: "bg-secondary/10 text-secondary"
+      title: "The Hidden Health Crisis: Indoor Air Pollution in Off-Grid Communities",
+      category: "Health",
+      date: "Dec 18, 2024",
+      author: "Dr. James Chen",
+      readTime: "5 min read",
+      excerpt: "Kerosene lamps and solid fuels cause over 3.2 million deaths annually. Learn about the devastating health impacts of energy poverty and how solar solutions can save lives.",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      featured: false
     },
     {
       id: 3,
-      title: "Ghana Distribution Plans: Making It Happen",
-      category: "Operations",
-      date: "Dec 1, 2024",
-      author: "Jordan Williams",
+      title: "From Classroom to Community: Student Stories from Ghana",
+      category: "Stories",
+      date: "Dec 15, 2024",
+      author: "Akosua Mensah",
+      readTime: "4 min read",
+      excerpt: "Meet the students whose lives have been transformed by solar-powered flashlights. Their stories show the real impact of bringing light to education.",
+      image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      featured: false
+    },
+    {
+      id: 4,
+      title: "Engineering Hope: The Technology Behind Our Solar Flashlights",
+      category: "Technology",
+      date: "Dec 12, 2024",
+      author: "Alex Kumar",
       readTime: "6 min read",
-      excerpt: "Learn about our upcoming distribution partnership and how we're ensuring our flashlights reach the students who need them most in rural Ghana.",
-      content: `
-        <p>Having a great product is only half the battle. The other half? Getting it into the hands of the students who need it most. Our upcoming distribution in Ghana represents months of careful planning, partnership building, and logistical coordination.</p>
-        
-        <h3>Choosing Ghana: Why This Region?</h3>
-        
-        <p>Ghana wasn't a random choice. After extensive research, we identified several factors that made it ideal for our pilot program:</p>
-        
-        <ul>
-          <li><strong>High Need:</strong> Over 2 million students in Ghana lack access to electricity at home</li>
-          <li><strong>Government Support:</strong> Ghana's Ministry of Education has been supportive of educational technology initiatives</li>
-          <li><strong>Stable Infrastructure:</strong> Existing networks allow for efficient distribution and follow-up</li>
-          <li><strong>Partner Organizations:</strong> Established relationships with local churches and NGOs</li>
-        </ul>
-        
-        <h3>Building Local Partnerships</h3>
-        
-        <p>We learned early that sustainable impact requires local ownership. Rather than parachuting in with our solution, we spent a year building relationships with community leaders, teachers, and families.</p>
-        
-        <p>Our key partners include:</p>
-        <ul>
-          <li><strong>Local Churches:</strong> With deep community trust and extensive reach</li>
-          <li><strong>Regional Schools:</strong> Teachers who understand student needs best</li>
-          <li><strong>Community Leaders:</strong> Elders who can ensure cultural appropriateness</li>
-          <li><strong>Parent Groups:</strong> Families who will support and maintain the devices</li>
-        </ul>
-        
-        <h3>The Distribution Model</h3>
-        
-        <p>Our distribution isn't just about handing out flashlights. It's a comprehensive program that includes:</p>
-        
-        <h4>Pre-Distribution</h4>
-        <ul>
-          <li>Community meetings to explain the program</li>
-          <li>Student and family registration</li>
-          <li>Basic education about solar technology</li>
-          <li>Setting expectations for care and maintenance</li>
-        </ul>
-        
-        <h4>Distribution Day</h4>
-        <ul>
-          <li>Hands-on demonstrations of flashlight features</li>
-          <li>Proper charging and care instructions</li>
-          <li>Q&A sessions with students and parents</li>
-          <li>Collection of baseline data for impact measurement</li>
-        </ul>
-        
-        <h4>Follow-Up</h4>
-        <ul>
-          <li>Monthly check-ins through local partners</li>
-          <li>Technical support and minor repairs</li>
-          <li>Impact assessment surveys</li>
-          <li>Community feedback sessions</li>
-        </ul>
-        
-        <h3>Ensuring Sustainability</h3>
-        
-        <p>We're not interested in one-time charity. Our goal is creating sustainable change. That means:</p>
-        
-        <ul>
-          <li><strong>Local Repair Training:</strong> Teaching community members basic maintenance</li>
-          <li><strong>Replacement Part Supply:</strong> Ensuring critical components are available locally</li>
-          <li><strong>Educational Integration:</strong> Working with teachers to incorporate flashlights into study routines</li>
-          <li><strong>Community Ownership:</strong> Gradually transferring program management to local leaders</li>
-        </ul>
-        
-        <h3>Measuring Impact</h3>
-        
-        <p>How do we know if we're making a difference? We're tracking multiple metrics:</p>
-        
-        <ul>
-          <li><strong>Educational Outcomes:</strong> Test scores, homework completion, school attendance</li>
-          <li><strong>Usage Patterns:</strong> How often and how long students use the flashlights</li>
-          <li><strong>Family Impact:</strong> Changes in household routines and attitudes toward education</li>
-          <li><strong>Device Performance:</strong> Technical reliability and user satisfaction</li>
-        </ul>
-        
-        <h3>Challenges We're Preparing For</h3>
-        
-        <p>No program is without challenges. We've identified potential issues and developed contingency plans:</p>
-        
-        <ul>
-          <li><strong>Cultural Adoption:</strong> Some families may be hesitant to adopt new technology</li>
-          <li><strong>Maintenance Issues:</strong> Devices may break or be misused</li>
-          <li><strong>Weather Challenges:</strong> Rainy seasons may affect solar charging</li>
-          <li><strong>Economic Pressures:</strong> Families may face pressure to sell devices</li>
-        </ul>
-        
-        <h3>Looking Beyond Ghana</h3>
-        
-        <p>Ghana is just the beginning. We're already in discussions with partners in Kenya, Malawi, and Bangladesh. Each new region will build on lessons learned from Ghana, creating a global network of students with access to light and learning.</p>
-        
-        <p>Our distribution program isn't just about logistics—it's about building relationships, creating trust, and ensuring that every flashlight we distribute creates lasting positive change in a student's life.</p>
-        
-        <p>By summer 2025, when we hand out our first 500 flashlights in Ghana, we'll be doing more than distributing devices. We'll be lighting up futures, one student at a time.</p>
-      `,
-      image: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
-      categoryColor: "bg-accent/10 text-accent"
+      excerpt: "Take a deep dive into the engineering process behind our solar flashlights. From 3D modeling to circuit design, see how student innovation creates real impact.",
+      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      featured: false
+    },
+    {
+      id: 5,
+      title: "Climate Change and Energy Justice: The Black Carbon Connection",
+      category: "Environment",
+      date: "Dec 10, 2024",
+      author: "Sofia Rodriguez",
+      readTime: "5 min read",
+      excerpt: "One kilogram of black carbon has the same warming effect as 700 kilograms of CO2. Explore how energy poverty contributes to climate change and environmental injustice.",
+      image: "https://images.unsplash.com/photo-1569163139394-de4e4f43e4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      featured: false
+    },
+    {
+      id: 6,
+      title: "Women and Girls: The Disproportionate Impact of Energy Poverty",
+      category: "Social Impact",
+      date: "Dec 8, 2024",
+      author: "Fatima Al-Rashid",
+      readTime: "6 min read",
+      excerpt: "Energy poverty affects women and children most severely. Learn how lack of electricity perpetuates gender inequality and limits educational opportunities for girls.",
+      image: "https://images.unsplash.com/photo-1594736797933-d0c6ba0b5091?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      featured: false
     }
   ];
+
+  const categories = ['All', 'Research', 'Health', 'Stories', 'Technology', 'Environment', 'Social Impact'];
+
+  const filteredPosts = selectedCategory === 'All' 
+    ? blogPosts 
+    : blogPosts.filter(post => post.category === selectedCategory);
+
+  const featuredPost = blogPosts.find(post => post.featured);
+  const regularPosts = blogPosts.filter(post => !post.featured);
 
   return (
     <div className="font-sans">
@@ -247,60 +94,161 @@ export default function Blog() {
       <section className="pt-20 pb-12 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 ref={titleRef} className="scroll-fade text-4xl sm:text-5xl lg:text-6xl font-bold text-dark mb-6">
-            Our Blog
+            Blog & Stories
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
-          <p ref={descRef} className="scroll-fade text-xl text-gray-600 leading-relaxed">
-            Stories from the field, engineering insights, and updates on our mission to light up education worldwide.
+          <p className="text-xl text-gray-600 leading-relaxed">
+            Insights, research, and stories from our mission to end energy poverty through education.
           </p>
         </div>
       </section>
 
-      {/* Blog Posts */}
-      <section className="py-16 bg-white">
+      {/* Featured Article */}
+      {featuredPost && (
+        <section className="py-16 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg overflow-hidden shadow-lg">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                <div className="relative">
+                  <img 
+                    src={featuredPost.image}
+                    alt={featuredPost.title}
+                    className="w-full h-64 lg:h-full object-cover"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                      Featured
+                    </span>
+                  </div>
+                </div>
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="flex items-center space-x-4 mb-4">
+                    <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
+                      {featuredPost.category}
+                    </span>
+                    <span className="text-gray-500 text-sm">{featuredPost.readTime}</span>
+                  </div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                    {featuredPost.title}
+                  </h2>
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    {featuredPost.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-gray-600">By {featuredPost.author}</span>
+                      <span className="text-gray-400">•</span>
+                      <span className="text-gray-600">{featuredPost.date}</span>
+                    </div>
+                    <Link href={`/blog/${featuredPost.id}`}>
+                      <button className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium">
+                        Read More
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Category Filter */}
+      <section className="py-8 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index) => {
-              const postRef = useScrollAnimation();
-              return (
-                <article key={post.id} ref={postRef} className="scroll-fade bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+          <div className="flex flex-wrap justify-center gap-2">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
+                  selectedCategory === category
+                    ? 'bg-primary text-white'
+                    : 'bg-white text-gray-700 hover:bg-gray-100'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Posts Grid */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {regularPosts.map((post) => (
+              <article key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="relative">
                   <img 
                     src={post.image}
                     alt={post.title}
                     className="w-full h-48 object-cover"
                   />
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className={`${post.categoryColor} px-3 py-1 rounded-full text-sm font-medium`}>
-                        {post.category}
-                      </span>
-                      <span className="text-gray-500 text-sm">{post.readTime}</span>
-                    </div>
-                    
-                    <h2 className="text-xl font-bold text-dark mb-3 hover:text-primary transition-colors duration-200">
-                      {post.title}
-                    </h2>
-                    
-                    <div className="flex items-center text-sm text-gray-500 mb-3">
-                      <span>By {post.author}</span>
-                      <span className="mx-2">•</span>
-                      <span>{post.date}</span>
-                    </div>
-                    
-                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                      {post.excerpt}
-                    </p>
-                    
+                  <div className="absolute top-4 left-4">
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                      post.category === 'Research' ? 'bg-blue-100 text-blue-800' :
+                      post.category === 'Health' ? 'bg-red-100 text-red-800' :
+                      post.category === 'Stories' ? 'bg-green-100 text-green-800' :
+                      post.category === 'Technology' ? 'bg-purple-100 text-purple-800' :
+                      post.category === 'Environment' ? 'bg-emerald-100 text-emerald-800' :
+                      'bg-pink-100 text-pink-800'
+                    }`}>
+                      {post.category}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-gray-500 text-sm">{post.readTime}</span>
+                    <span className="text-gray-500 text-sm">{post.date}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-600 text-sm">By {post.author}</span>
                     <Link href={`/blog/${post.id}`}>
-                      <button className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors duration-200">
-                        Read More 
-                        <i className="fas fa-arrow-right ml-2 text-sm"></i>
+                      <button className="text-primary font-medium hover:text-primary/80 transition-colors duration-200 text-sm">
+                        Read More →
                       </button>
                     </Link>
                   </div>
-                </article>
-              );
-            })}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 bg-gradient-to-br from-primary to-accent text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-6">Join the Conversation</h2>
+          <p className="text-xl mb-8 opacity-90">
+            Stay updated with our latest research, stories, and insights on energy poverty and education.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="https://gofund.me/436b67db" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+            >
+              <i className="fas fa-heart mr-2"></i>
+              Support Our Mission
+            </a>
+            <a 
+              href="/contact"
+              className="bg-white/20 backdrop-blur-sm text-white border-2 border-white/30 px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors duration-200"
+            >
+              <i className="fas fa-envelope mr-2"></i>
+              Share Your Story
+            </a>
           </div>
         </div>
       </section>

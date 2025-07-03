@@ -46,7 +46,7 @@ export default function HeroSection() {
           showElements.buttons ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <a 
-            href="https://donate.stripe.com/test_your_stripe_link" 
+            href="https://gofund.me/436b67db" 
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary/90 transform hover:scale-105 transition-all duration-200 shadow-lg text-center"
