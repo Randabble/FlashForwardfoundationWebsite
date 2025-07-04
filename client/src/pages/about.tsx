@@ -75,7 +75,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h2 ref={storyRef} className="scroll-fade text-3xl font-bold text-gray-900 mb-8 text-center">Our Team Story</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
               <div>
                 <p className="text-lg text-gray-700 mb-6">
                   Flash Forward was founded by a group of passionate students at Sammamish High School who witnessed the devastating effects of energy poverty during a school presentation about global challenges. Moved by the stories of children unable to study after dark, our founders decided to take action.
@@ -93,6 +93,91 @@ export default function About() {
                   alt="Team working together"
                   className="rounded-lg shadow-lg"
                 />
+              </div>
+            </div>
+
+            {/* Meet Our Team Section */}
+            <div className="border-t border-gray-200 pt-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Meet Our Core Team</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="relative mb-4">
+                    <img 
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                      alt="Alex Chen"
+                      className="w-32 h-32 rounded-full mx-auto object-cover"
+                    />
+                    <div className="absolute inset-0 w-32 h-32 rounded-full mx-auto bg-gradient-to-br from-primary/20 to-accent/20"></div>
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Alex Chen</h4>
+                  <p className="text-primary font-medium mb-2">Co-Founder & Engineering Lead</p>
+                  <p className="text-gray-600 text-sm">Leads our 3D design and circuit development, passionate about sustainable technology solutions.</p>
+                </div>
+
+                <div className="text-center">
+                  <div className="relative mb-4">
+                    <img 
+                      src="https://images.unsplash.com/photo-1494790108755-2616c998f4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                      alt="Maya Patel"
+                      className="w-32 h-32 rounded-full mx-auto object-cover"
+                    />
+                    <div className="absolute inset-0 w-32 h-32 rounded-full mx-auto bg-gradient-to-br from-primary/20 to-accent/20"></div>
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Maya Patel</h4>
+                  <p className="text-primary font-medium mb-2">Co-Founder & Operations Director</p>
+                  <p className="text-gray-600 text-sm">Manages partnerships, distribution logistics, and impact measurement across our program regions.</p>
+                </div>
+
+                <div className="text-center">
+                  <div className="relative mb-4">
+                    <img 
+                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                      alt="Jordan Williams"
+                      className="w-32 h-32 rounded-full mx-auto object-cover"
+                    />
+                    <div className="absolute inset-0 w-32 h-32 rounded-full mx-auto bg-gradient-to-br from-primary/20 to-accent/20"></div>
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Jordan Williams</h4>
+                  <p className="text-primary font-medium mb-2">Advocacy & Communications Lead</p>
+                  <p className="text-gray-600 text-sm">Drives awareness campaigns and tells the stories of students whose lives have been transformed.</p>
+                </div>
+
+                <div className="text-center">
+                  <div className="relative mb-4">
+                    <img 
+                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                      alt="Sofia Rodriguez"
+                      className="w-32 h-32 rounded-full mx-auto object-cover"
+                    />
+                    <div className="absolute inset-0 w-32 h-32 rounded-full mx-auto bg-gradient-to-br from-primary/20 to-accent/20"></div>
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Sofia Rodriguez</h4>
+                  <p className="text-primary font-medium mb-2">Research & Development</p>
+                  <p className="text-gray-600 text-sm">Conducts impact studies and develops new features to improve our solar flashlight design.</p>
+                </div>
+              </div>
+
+              <div className="mt-12 bg-primary/10 rounded-lg p-8 text-center">
+                <h4 className="text-xl font-semibold text-gray-900 mb-4">Join Our Growing Team</h4>
+                <p className="text-gray-700 mb-6">
+                  We're always looking for passionate students, educators, and professionals who want to make a difference in global education and energy access.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a 
+                    href="/volunteer"
+                    className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200"
+                  >
+                    <i className="fas fa-hands-helping mr-2"></i>
+                    Volunteer With Us
+                  </a>
+                  <a 
+                    href="/partner"
+                    className="bg-white text-primary border-2 border-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary/10 transition-colors duration-200"
+                  >
+                    <i className="fas fa-handshake mr-2"></i>
+                    Partner With Us
+                  </a>
+                </div>
               </div>
             </div>
           </div>

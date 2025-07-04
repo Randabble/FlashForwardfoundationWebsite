@@ -54,6 +54,7 @@ export default function Navigation() {
             <div className="ml-10 flex items-baseline space-x-8">
               <Link href="/"><span className="nav-link text-gray-700 hover:text-primary transition-colors duration-200 cursor-pointer">Home</span></Link>
               <Link href="/about"><span className="nav-link text-gray-700 hover:text-primary transition-colors duration-200 cursor-pointer">About</span></Link>
+              <Link href="/blog"><span className="nav-link text-gray-700 hover:text-primary transition-colors duration-200 cursor-pointer">Blog</span></Link>
               <Link href="/impact"><span className="nav-link text-gray-700 hover:text-primary transition-colors duration-200 cursor-pointer">Our Impact</span></Link>
               
               {/* Get Involved Dropdown */}
@@ -69,13 +70,13 @@ export default function Navigation() {
                 
                 {isDropdownOpen && (
                   <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                    <Link href="/contact">
+                    <Link href="/volunteer">
                       <div className="px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors duration-200 cursor-pointer">
                         <i className="fas fa-hands-helping mr-2"></i>
                         Volunteer
                       </div>
                     </Link>
-                    <Link href="/contact">
+                    <Link href="/partner">
                       <div className="px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors duration-200 cursor-pointer">
                         <i className="fas fa-handshake mr-2"></i>
                         Partner
@@ -118,14 +119,15 @@ export default function Navigation() {
         <div className="px-2 pt-2 pb-3 space-y-1">
           <Link href="/"><div className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>Home</div></Link>
           <Link href="/about"><div className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>About</div></Link>
+          <Link href="/blog"><div className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>Blog</div></Link>
           <Link href="/impact"><div className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>Our Impact</div></Link>
           
           {/* Get Involved Mobile Section */}
           <div className="px-3 py-2">
             <div className="text-gray-700 font-medium mb-2">Get Involved</div>
             <div className="ml-4 space-y-1">
-              <Link href="/contact"><div className="block px-3 py-2 text-gray-600 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>Volunteer</div></Link>
-              <Link href="/contact"><div className="block px-3 py-2 text-gray-600 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>Partner</div></Link>
+              <Link href="/volunteer"><div className="block px-3 py-2 text-gray-600 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>Volunteer</div></Link>
+              <Link href="/partner"><div className="block px-3 py-2 text-gray-600 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>Partner</div></Link>
               <Link href="/contact"><div className="block px-3 py-2 text-gray-600 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>Contact</div></Link>
             </div>
           </div>

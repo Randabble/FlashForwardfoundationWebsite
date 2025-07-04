@@ -30,7 +30,7 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://formspree.io/f/xpwzgqko', {
+      const response = await fetch('https://formspree.io/f/xldjopko', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -206,10 +206,10 @@ export default function Contact() {
                     <h3 className="text-lg font-semibold text-dark mb-1">Email Us</h3>
                     <p className="text-gray-600 mb-2">We typically respond within 24 hours</p>
                     <a 
-                      href="mailto:contact@flashforwardfoundation.org"
+                      href="mailto:flashforwardnp@gmail.com"
                       className="text-primary font-medium hover:text-primary/80 transition-colors duration-200"
                     >
-                      contact@flashforwardfoundation.org
+                      flashforwardnp@gmail.com
                     </a>
                   </div>
                 </div>

@@ -11,6 +11,8 @@ import Product from "@/pages/product";
 import Blog from "@/pages/blog";
 import BlogPost from "@/pages/blog-post";
 import Contact from "@/pages/contact";
+import Volunteer from "@/pages/volunteer";
+import Partner from "@/pages/partner";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -24,6 +26,8 @@ function Router() {
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:id" component={BlogPost} />
       <Route path="/contact" component={Contact} />
+      <Route path="/volunteer" component={Volunteer} />
+      <Route path="/partner" component={Partner} />
       <Route component={NotFound} />
     </Switch>
   );

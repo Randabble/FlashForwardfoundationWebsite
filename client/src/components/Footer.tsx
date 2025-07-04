@@ -36,18 +36,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/about">
+                <Link href="/blog">
                   <span className="text-gray-300 hover:text-primary transition-colors duration-200 cursor-pointer">
-                    <i className="fas fa-users mr-2"></i>
-                    Our Team
+                    <i className="fas fa-blog mr-2"></i>
+                    Blog
                   </span>
                 </Link>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection('faq')} className="text-gray-300 hover:text-primary transition-colors duration-200">
-                  <i className="fas fa-question-circle mr-2"></i>
-                  FAQ
-                </button>
               </li>
             </ul>
           </div>
@@ -63,7 +57,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/contact">
+                <Link href="/volunteer">
                   <span className="text-gray-300 hover:text-primary transition-colors duration-200 cursor-pointer">
                     <i className="fas fa-hands-helping mr-2"></i>
                     Volunteer
@@ -71,7 +65,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact">
+                <Link href="/partner">
                   <span className="text-gray-300 hover:text-primary transition-colors duration-200 cursor-pointer">
                     <i className="fas fa-handshake mr-2"></i>
                     Partner
@@ -87,7 +81,7 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <i className="fas fa-envelope text-primary"></i>
-                <span className="text-gray-300">contact@flashforwardfoundation.org</span>
+                <span className="text-gray-300">flashforwardnp@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <i className="fas fa-map-marker-alt text-primary"></i>
