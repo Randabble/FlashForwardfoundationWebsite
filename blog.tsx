@@ -1,8 +1,9 @@
+import React from "react";
 import { useState } from 'react';
 import { Link } from "wouter";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
+import { useScrollAnimation } from "./hooks/useScrollAnimation";
 
 export default function Blog() {
   const titleRef = useScrollAnimation();

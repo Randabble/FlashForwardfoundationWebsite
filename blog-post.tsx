@@ -1,7 +1,8 @@
+import React from "react";
 import { useRoute, Link } from "wouter";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
+import { useScrollAnimation } from "./hooks/useScrollAnimation";
 
 export default function BlogPost() {
   const [, params] = useRoute("/blog/:id");

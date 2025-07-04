@@ -1,7 +1,8 @@
+import React from "react";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
+import { useScrollAnimation } from "./hooks/useScrollAnimation";
 import { useState } from 'react';
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export default function Partner() {
   const titleRef = useScrollAnimation();
