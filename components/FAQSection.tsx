@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import React, { useState } from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function FAQSection() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);

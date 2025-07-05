@@ -1,5 +1,6 @@
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { useCounterAnimation } from '@/hooks/useCounterAnimation';
+import React from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { useCounterAnimation } from '../hooks/useCounterAnimation';
 
 export default function ImpactSection() {
   const titleRef = useScrollAnimation();
