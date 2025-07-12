@@ -104,7 +104,7 @@ export default function About() {
                 <div className="text-center">
                   <div className="relative mb-4">
                     <img 
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                      src="/images/team/sreeface.jpeg"
                       alt="Sree Kokkonda"
                       className="w-32 h-32 rounded-full mx-auto object-cover"
                     />
@@ -118,7 +118,7 @@ export default function About() {
                 <div className="text-center">
                   <div className="relative mb-4">
                     <img 
-                      src="https://images.unsplash.com/photo-1494790108755-2616c998f4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                      src="/images/team/nithilanface.png"
                       alt="Nithilan Selakumar"
                       className="w-32 h-32 rounded-full mx-auto object-cover"
                     />
@@ -132,7 +132,7 @@ export default function About() {
                 <div className="text-center">
                   <div className="relative mb-4">
                     <img 
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                      src="/images/team/romirface.png"
                       alt="Romir Chekuri"
                       className="w-32 h-32 rounded-full mx-auto object-cover"
                     />
@@ -146,7 +146,7 @@ export default function About() {
                 <div className="text-center">
                   <div className="relative mb-4">
                     <img 
-                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                      src="samarthface.png"
                       alt="Samarth Morentsov"
                       className="w-32 h-32 rounded-full mx-auto object-cover"
                     />

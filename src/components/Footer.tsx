@@ -43,6 +43,14 @@ export default function Footer() {
                   </span>
                 </Link>
               </li>
+              <li>
+                <Link href="/team">
+                  <span className="text-gray-300 hover:text-primary transition-colors duration-200 cursor-pointer">
+                    <i className="fa-solid fa-people-group"></i>
+                    Our Team
+                  </span>
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -81,7 +89,12 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <i className="fas fa-envelope text-primary"></i>
-                <span className="text-gray-300">flashforwardnp@gmail.com</span>
+                <a 
+                  href="mailto:flashforwardnp@gmail.com"
+                  className="text-gray-300 hover:underline"
+                >
+                  flashforwardnp@gmail.com
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <i className="fas fa-map-marker-alt text-primary"></i>
@@ -89,7 +102,14 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <i className="fas fa-at text-primary"></i>
-                <span className="text-gray-300">@flashforwardfoundation</span>
+                <a 
+                  href="https://instagram.com/flashforwardfoundation" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:underline"
+                >
+                  @flashforwardfoundation
+                </a>
               </div>
             </div>
           </div>
