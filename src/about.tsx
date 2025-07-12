@@ -79,10 +79,10 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
               <div>
                 <p className="text-lg text-gray-700 mb-6">
-                  Flash Forward was founded by a group of passionate students at Sammamish High School who witnessed the devastating effects of energy poverty during a school presentation about global challenges. Moved by the stories of children unable to study after dark, our founders decided to take action.
+                  Flash Forward was founded by a group of passionate students in the Bellevue School District who witnessed the devastating effects of energy poverty during a school presentation about global challenges. Moved by the stories of children unable to study after dark, our founders decided to take action.
                 </p>
                 <p className="text-lg text-gray-700 mb-6">
-                  What started as a small project in the Builders Club has grown into a comprehensive nonprofit organization. Our team combines engineering students who design and prototype the solar flashlights, business students who manage operations and partnerships, and advocacy students who raise awareness about energy poverty.
+                  What started as a small project has grown into a comprehensive nonprofit organization. Our team combines engineering students who design and prototype the solar flashlights, business students who manage operations and partnerships, and advocacy students who raise awareness about energy poverty.
                 </p>
                 <p className="text-lg text-gray-700">
                   We believe that young people have the power to create meaningful change. Through Flash Forward, we're not just providing light – we're empowering the next generation of leaders to tackle global challenges with innovation and compassion.
@@ -105,56 +105,56 @@ export default function About() {
                   <div className="relative mb-4">
                     <img 
                       src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
-                      alt="Alex Chen"
+                      alt="Sree Kokkonda"
                       className="w-32 h-32 rounded-full mx-auto object-cover"
                     />
                     <div className="absolute inset-0 w-32 h-32 rounded-full mx-auto bg-gradient-to-br from-primary/20 to-accent/20"></div>
                   </div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Alex Chen</h4>
-                  <p className="text-primary font-medium mb-2">Co-Founder & Engineering Lead</p>
-                  <p className="text-gray-600 text-sm">Leads our 3D design and circuit development, passionate about sustainable technology solutions.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Sree Kokkonda</h4>
+                  <p className="text-primary font-medium mb-2">President & Engineering Lead</p>
+                  <p className="text-gray-600 text-sm">Leads the team with vision and direction, passionate about combining technology and social impact to create sustainable change.</p>
                 </div>
 
                 <div className="text-center">
                   <div className="relative mb-4">
                     <img 
                       src="https://images.unsplash.com/photo-1494790108755-2616c998f4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
-                      alt="Maya Patel"
+                      alt="Nithilan Selakumar"
                       className="w-32 h-32 rounded-full mx-auto object-cover"
                     />
                     <div className="absolute inset-0 w-32 h-32 rounded-full mx-auto bg-gradient-to-br from-primary/20 to-accent/20"></div>
                   </div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Maya Patel</h4>
-                  <p className="text-primary font-medium mb-2">Co-Founder & Operations Director</p>
-                  <p className="text-gray-600 text-sm">Manages partnerships, distribution logistics, and impact measurement across our program regions.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Nithilan Selakumar</h4>
+                  <p className="text-primary font-medium mb-2">Vice President & Operations Lead</p>
+                  <p className="text-gray-600 text-sm">Handles the paperwork side—researching laws, partnerships, and making sure we operate responsibly.</p>
                 </div>
 
                 <div className="text-center">
                   <div className="relative mb-4">
                     <img 
                       src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
-                      alt="Jordan Williams"
+                      alt="Romir Chekuri"
                       className="w-32 h-32 rounded-full mx-auto object-cover"
                     />
                     <div className="absolute inset-0 w-32 h-32 rounded-full mx-auto bg-gradient-to-br from-primary/20 to-accent/20"></div>
                   </div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Jordan Williams</h4>
-                  <p className="text-primary font-medium mb-2">Advocacy & Communications Lead</p>
-                  <p className="text-gray-600 text-sm">Drives awareness campaigns and tells the stories of students whose lives have been transformed.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Romir Chekuri</h4>
+                  <p className="text-primary font-medium mb-2">Treasurer and Outreach Lead</p>
+                  <p className="text-gray-600 text-sm">Manages our budget, tracks donations, and ensures every dollar is spent wisely to support our mission. Also Manages partnerships, distribution logistics, and impact measurement across our program regions.</p>
                 </div>
 
                 <div className="text-center">
                   <div className="relative mb-4">
                     <img 
                       src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
-                      alt="Sofia Rodriguez"
+                      alt="Samarth Morentsov"
                       className="w-32 h-32 rounded-full mx-auto object-cover"
                     />
                     <div className="absolute inset-0 w-32 h-32 rounded-full mx-auto bg-gradient-to-br from-primary/20 to-accent/20"></div>
                   </div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Sofia Rodriguez</h4>
-                  <p className="text-primary font-medium mb-2">Research & Development</p>
-                  <p className="text-gray-600 text-sm">Conducts impact studies and develops new features to improve our solar flashlight design.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Samarth Morentsov</h4>
+                  <p className="text-primary font-medium mb-2">Secretary and R&D Lead</p>
+                  <p className="text-gray-600 text-sm">Keeps our team organized by documenting meetings, maintaining records, and making sure everyone stays on the same page. Also conducts impact studies and develops new features to improve our solar flashlight design.</p>
                 </div>
               </div>
 
@@ -200,7 +200,7 @@ export default function About() {
               <div className="border-l-4 border-primary pl-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">How do you distribute the flashlights?</h3>
                 <p className="text-gray-700">
-                  We partner with local organizations and schools in Ghana to ensure our flashlights reach the students who need them most. Each flashlight comes with educational materials and instructions in local languages.
+                  We partner with local organizations and schools across Africa to ensure our flashlights reach the students who need them most. Each flashlight comes with educational materials and instructions in local languages.
                 </p>
               </div>
               <div className="border-l-4 border-primary pl-6">
@@ -215,12 +215,12 @@ export default function About() {
                   Each solar flashlight costs approximately $15 to produce and distribute. This includes materials, assembly, packaging, and shipping to Ghana.
                 </p>
               </div>
-              <div className="border-l-4 border-primary pl-6">
+              {/* <div className="border-l-4 border-primary pl-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">What impact have you made so far?</h3>
                 <p className="text-gray-700">
                   We've distributed over 500 solar flashlights to students across 15 schools in Ghana, enabling more than 2,000 additional study hours and directly impacting educational outcomes in rural communities.
                 </p>
-              </div>
+              </div> */}
               <div className="border-l-4 border-primary pl-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Why focus on energy poverty?</h3>
                 <p className="text-gray-700">

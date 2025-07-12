@@ -163,7 +163,7 @@ export default function ProductSection() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-dark mb-2">High-Efficiency Solar Panel</h3>
-                <p className="text-gray-600">5W monocrystalline solar cells with 20% efficiency rating that charge quickly even in low-light conditions, ensuring reliable power for studying.</p>
+                <p className="text-gray-600">Monocrystalline solar cells with solid efficiency ratings that charge quickly even in low-light conditions, ensuring reliable power for studying.</p>
               </div>
             </div>
 
@@ -173,7 +173,7 @@ export default function ProductSection() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-dark mb-2">Long-Lasting Battery</h3>
-                <p className="text-gray-600">3000mAh lithium-ion battery provides up to 8 hours of continuous bright light and can be recharged over 1000 times with proper care.</p>
+                <p className="text-gray-600">Lithium-ion battery provides up to 8 hours of continuous bright light and can be recharged over 1000 times with proper care.</p>
               </div>
             </div>
 
@@ -183,7 +183,7 @@ export default function ProductSection() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-dark mb-2">Adjustable LED Array</h3>
-                <p className="text-gray-600">12 high-brightness LEDs with multiple intensity levels and wide beam angle, perfect for reading and group study sessions.</p>
+                <p className="text-gray-600">2 high-brightness LEDs with a wide beam angle, perfect for reading and group study sessions.</p>
               </div>
             </div>
 
@@ -193,7 +193,7 @@ export default function ProductSection() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-dark mb-2">Durable Construction</h3>
-                <p className="text-gray-600">IP65 waterproof rating with shock-resistant 3D-printed housing designed to withstand daily use in challenging conditions.</p>
+                <p className="text-gray-600">waterproof with shock-resistant 3D-printed housing designed to withstand daily use in challenging conditions.</p>
               </div>
             </div>
 
@@ -203,7 +203,7 @@ export default function ProductSection() {
                 <strong>Student Innovation:</strong>
               </p>
               <p className="text-gray-700">
-                Designed and assembled by Sammamish High School Builders Club students, combining engineering expertise with real-world impact.
+                Designed and assembled by students, combining engineering expertise with real-world impact.
               </p>
             </div>
           </div>
@@ -218,7 +218,7 @@ export default function ProductSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl"></div>
             </div>
             
-            <div className="mt-8 bg-gray-100 rounded-xl p-6 text-center">
+            {/* <div className="mt-8 bg-gray-100 rounded-xl p-6 text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-cog text-white text-2xl"></i>
               </div>
@@ -231,7 +231,7 @@ export default function ProductSection() {
                 <p>• Charge Time: 6-8 Hours</p>
                 <p>• Lifespan: 1000+ Cycles</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

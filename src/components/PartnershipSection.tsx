@@ -59,8 +59,8 @@ export default function PartnershipSection() {
                 "Working with Flash Forward has been incredible. These students don't just dream about changing the world – they actually do it. Their innovative approach to solving real problems through sustainable technology is exactly what our communities need."
               </p>
               <div className="flex flex-col lg:flex-row lg:items-center lg:gap-4">
-                <p className="font-semibold text-dark">Dr. Sarah Mitchell</p>
-                <p className="text-gray-600">Director, Thrive Consulting</p>
+                <p className="font-semibold text-dark">Shreyas Prabhu</p>
+                <p className="text-gray-600">Founder, Sammamish Builders Club</p>
               </div>
             </div>
           </div>

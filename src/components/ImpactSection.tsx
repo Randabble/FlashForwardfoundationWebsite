@@ -22,7 +22,7 @@ export default function ImpactSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div ref={studentsCounter.elementRef} className="scroll-fade text-center bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="text-center bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <i className="fas fa-users text-white text-3xl"></i>
             </div>
@@ -31,7 +31,7 @@ export default function ImpactSection() {
             <p className="text-gray-600">Globally lack access to electricity for studying</p>
           </div>
 
-          <div ref={percentCounter.elementRef} className="scroll-fade text-center bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="text-center bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <i className="fas fa-moon text-white text-3xl"></i>
             </div>
@@ -48,6 +48,7 @@ export default function ImpactSection() {
             <div className="text-lg font-semibold text-gray-800 mb-2">Extra Hours Daily</div>
             <p className="text-gray-600">Solar lights can add to daily study time</p>
           </div>
+          
         </div>
       </div>
     </section>

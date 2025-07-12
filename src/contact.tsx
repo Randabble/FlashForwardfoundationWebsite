@@ -246,25 +246,25 @@ export default function Contact() {
                 </p>
                 <div className="flex space-x-4">
                   <a 
-                    href="#" 
+                    href="https://www.instagram.com/flashforwardfoundation/" 
                     className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg"
                   >
                     <i className="fab fa-instagram"></i>
                   </a>
                   <a 
-                    href="#" 
+                    href="https://www.tiktok.com/@flashforwardfoundation" 
                     className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg"
                   >
-                    <i className="fab fa-twitter"></i>
+                    <i className="fab fa-tiktok"></i>
                   </a>
                   <a 
-                    href="#" 
+                    href="https://www.linkedin.com/in/flash-forward-910944352/" 
                     className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg"
                   >
                     <i className="fab fa-linkedin"></i>
                   </a>
                   <a 
-                    href="#" 
+                    href="https://www.youtube.com/@FlashForwardFoundation" 
                     className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg"
                   >
                     <i className="fab fa-youtube"></i>

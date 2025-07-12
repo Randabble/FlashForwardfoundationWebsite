@@ -35,105 +35,105 @@ export default function Impact() {
   ];
 
   // Auto-rotate testimonials
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  //   }, 5000);
+  //   return () => clearInterval(interval);
+  // }, [testimonials.length]);
 
-  return (
-    <div className="font-sans">
-      <Navigation />
+  // return (
+  //   <div className="font-sans">
+  //     <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-20 pb-12 bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 ref={titleRef} className="scroll-fade text-4xl sm:text-5xl lg:text-6xl font-bold text-dark mb-6">
-            Our Impact
-          </h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
-          <p className="text-xl text-gray-600 leading-relaxed">
-            Lighting up education and transforming lives across off-grid communities in Ghana and beyond.
-          </p>
-        </div>
-      </section>
+  //     {/* Hero Section */}
+  //     <section className="pt-20 pb-12 bg-gradient-to-br from-primary/5 to-accent/5">
+  //       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  //         <h1 ref={titleRef} className="scroll-fade text-4xl sm:text-5xl lg:text-6xl font-bold text-dark mb-6">
+  //           Our Impact
+  //         </h1>
+  //         <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
+  //         <p className="text-xl text-gray-600 leading-relaxed">
+  //           Lighting up education and transforming lives across off-grid communities in Ghana and beyond.
+  //         </p>
+  //       </div>
+  //     </section>
 
-      {/* Impact Stats */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-8">
-              <div className="text-4xl font-bold text-primary mb-4">685M+</div>
-              <div className="text-xl font-semibold text-gray-900 mb-2">People in Energy Poverty</div>
-              <p className="text-gray-600">Worldwide without access to electricity</p>
-            </div>
-            <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-8">
-              <div className="text-4xl font-bold text-primary mb-4">500+</div>
-              <div className="text-xl font-semibold text-gray-900 mb-2">Flashlights Distributed</div>
-              <p className="text-gray-600">Solar-powered lights delivered to students</p>
-            </div>
-            <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-8">
-              <div className="text-4xl font-bold text-primary mb-4">15</div>
-              <div className="text-xl font-semibold text-gray-900 mb-2">Schools Reached</div>
-              <p className="text-gray-600">Educational institutions supported</p>
-            </div>
-            <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-8">
-              <div className="text-4xl font-bold text-primary mb-4">2,000+</div>
-              <div className="text-xl font-semibold text-gray-900 mb-2">Study Hours Enabled</div>
-              <p className="text-gray-600">Additional learning time created</p>
-            </div>
-          </div>
-        </div>
-      </section>
+  //     {/* Impact Stats */}
+  //     <section className="py-16 bg-white">
+  //       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  //         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+  //           <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-8">
+  //             <div className="text-4xl font-bold text-primary mb-4">685M+</div>
+  //             <div className="text-xl font-semibold text-gray-900 mb-2">People in Energy Poverty</div>
+  //             <p className="text-gray-600">Worldwide without access to electricity</p>
+  //           </div>
+  //           <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-8">
+  //             <div className="text-4xl font-bold text-primary mb-4">500+</div>
+  //             <div className="text-xl font-semibold text-gray-900 mb-2">Flashlights Distributed</div>
+  //             <p className="text-gray-600">Solar-powered lights delivered to students</p>
+  //           </div>
+  //           <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-8">
+  //             <div className="text-4xl font-bold text-primary mb-4">15</div>
+  //             <div className="text-xl font-semibold text-gray-900 mb-2">Schools Reached</div>
+  //             <p className="text-gray-600">Educational institutions supported</p>
+  //           </div>
+  //           <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-8">
+  //             <div className="text-4xl font-bold text-primary mb-4">2,000+</div>
+  //             <div className="text-xl font-semibold text-gray-900 mb-2">Study Hours Enabled</div>
+  //             <p className="text-gray-600">Additional learning time created</p>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </section>
 
-      {/* Testimonials Slideshow */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 ref={testimonialsRef} className="scroll-fade text-3xl font-bold text-gray-900 mb-12 text-center">
-            Stories from Students
-          </h2>
+  //     {/* Testimonials Slideshow */}
+  //     <section className="py-16 bg-gray-50">
+  //       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  //         <h2 ref={testimonialsRef} className="scroll-fade text-3xl font-bold text-gray-900 mb-12 text-center">
+  //           Stories from Students
+  //         </h2>
           
-          <div className="relative bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-8 md:p-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div className="text-center md:text-left">
-                  <img 
-                    src={testimonials[currentTestimonial].image}
-                    alt={testimonials[currentTestimonial].name}
-                    className="w-32 h-32 rounded-full mx-auto md:mx-0 mb-6 object-cover"
-                  />
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    {testimonials[currentTestimonial].name}
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    Age {testimonials[currentTestimonial].age} • {testimonials[currentTestimonial].location}
-                  </p>
-                </div>
-                <div>
-                  <div className="text-6xl text-primary mb-4">"</div>
-                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    {testimonials[currentTestimonial].quote}
-                  </p>
-                </div>
-              </div>
-            </div>
+  //         <div className="relative bg-white rounded-lg shadow-lg overflow-hidden">
+  //           <div className="p-8 md:p-12">
+  //             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+  //               <div className="text-center md:text-left">
+  //                 <img 
+  //                   src={testimonials[currentTestimonial].image}
+  //                   alt={testimonials[currentTestimonial].name}
+  //                   className="w-32 h-32 rounded-full mx-auto md:mx-0 mb-6 object-cover"
+  //                 />
+  //                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
+  //                   {testimonials[currentTestimonial].name}
+  //                 </h3>
+  //                 <p className="text-gray-600 mb-4">
+  //                   Age {testimonials[currentTestimonial].age} • {testimonials[currentTestimonial].location}
+  //                 </p>
+  //               </div>
+  //               <div>
+  //                 <div className="text-6xl text-primary mb-4">"</div>
+  //                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
+  //                   {testimonials[currentTestimonial].quote}
+  //                 </p>
+  //               </div>
+  //             </div>
+  //           </div>
             
-            {/* Navigation dots */}
-            <div className="flex justify-center space-x-2 pb-6">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    index === currentTestimonial ? 'bg-primary' : 'bg-gray-300'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+  //           {/* Navigation dots */}
+  //           <div className="flex justify-center space-x-2 pb-6">
+  //             {testimonials.map((_, index) => (
+  //               <button
+  //                 key={index}
+  //                 onClick={() => setCurrentTestimonial(index)}
+  //                 className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+  //                   index === currentTestimonial ? 'bg-primary' : 'bg-gray-300'
+  //                 }`}
+  //               />
+  //             ))}
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </section>
 
       {/* How It Works */}
       <section className="py-16 bg-white">
@@ -155,19 +155,19 @@ export default function Impact() {
               <div className="space-y-4">
                 <div className="flex items-start">
                   <i className="fas fa-solar-panel text-primary mt-1 mr-3"></i>
-                  <span className="text-gray-700"><strong>Solar Panel:</strong> 5W monocrystalline with 20% efficiency rating</span>
+                  <span className="text-gray-700"><strong>Solar Panel:</strong> Monocrystalline with 20% efficiency rating</span>
                 </div>
                 <div className="flex items-start">
                   <i className="fas fa-battery-full text-primary mt-1 mr-3"></i>
-                  <span className="text-gray-700"><strong>Battery:</strong> 3000mAh lithium-ion for 8+ hours of lighting</span>
+                  <span className="text-gray-700"><strong>Battery:</strong>Lithium-ion battery for 8+ hours of lighting</span>
                 </div>
                 <div className="flex items-start">
                   <i className="fas fa-lightbulb text-primary mt-1 mr-3"></i>
-                  <span className="text-gray-700"><strong>LED Array:</strong> 12 high-brightness LEDs with adjustable intensity</span>
+                  <span className="text-gray-700"><strong>LED Array:</strong>2 high-brightness LEDs</span>
                 </div>
                 <div className="flex items-start">
                   <i className="fas fa-shield-alt text-primary mt-1 mr-3"></i>
-                  <span className="text-gray-700"><strong>Durability:</strong> IP65 waterproof rating and shock-resistant housing</span>
+                  <span className="text-gray-700"><strong>Durability:</strong>Waterproof and shock-resistant housing</span>
                 </div>
               </div>
             </div>
@@ -247,13 +247,14 @@ export default function Impact() {
                 </div>
               </div>
             </div>
-            <div>
-              {/* Africa Map */}
+            
+            {/* <div>
+              {}
               <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-8">
                 <h4 className="text-xl font-bold text-gray-900 mb-6 text-center">Distribution Across Ghana</h4>
                 <div className="relative">
                   <svg viewBox="0 0 400 300" className="w-full h-64">
-                    {/* Simplified Ghana outline */}
+                    {}
                     <path
                       d="M150 80 L250 85 L280 120 L285 180 L270 220 L240 240 L180 245 L140 240 L120 200 L125 150 L150 80 Z"
                       fill="#e5f3ff"
@@ -261,14 +262,14 @@ export default function Impact() {
                       strokeWidth="2"
                     />
                     
-                    {/* Distribution points */}
+                    {}
                     <circle cx="180" cy="130" r="8" fill="#ef4444" className="animate-pulse" />
                     <circle cx="220" cy="160" r="8" fill="#ef4444" className="animate-pulse" />
                     <circle cx="160" cy="180" r="8" fill="#ef4444" className="animate-pulse" />
                     <circle cx="200" cy="200" r="8" fill="#ef4444" className="animate-pulse" />
                     <circle cx="240" cy="140" r="8" fill="#ef4444" className="animate-pulse" />
                     
-                    {/* Labels */}
+                    {}
                     <text x="200" y="50" textAnchor="middle" className="text-lg font-bold fill-gray-800">Ghana</text>
                     <text x="190" cy="120" textAnchor="middle" className="text-xs fill-gray-600">Ashanti</text>
                     <text x="230" cy="150" textAnchor="middle" className="text-xs fill-gray-600">Eastern</text>
@@ -288,7 +289,7 @@ export default function Impact() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
