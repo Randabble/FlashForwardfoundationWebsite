@@ -146,7 +146,7 @@ export default function About() {
                 <div className="text-center">
                   <div className="relative mb-4">
                     <img 
-                      src="samarthface.jpeg"
+                      src="/images/team/samarthface.jpeg"
                       alt="Samarth Morentsov"
                       className="w-32 h-32 rounded-full mx-auto object-cover"
                     />

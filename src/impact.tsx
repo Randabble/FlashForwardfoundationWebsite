@@ -310,6 +310,27 @@ export default function Impact() {
             </a>
           </div>
         </div>
+      </section>''
+      {/* Video Showcase */}
+      <section className="py-20 bg-gradient-to-br from-secondary/5 to-accent/5">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-dark mb-6">
+            Watch How Flash Forward Works
+          </h2>
+          <p className="text-lg text-gray-700 mb-10 max-w-3xl mx-auto">
+            Learn how our team designs, assembles, and distributes solar-powered flashlights—empowering students around the world.
+          </p>
+          <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-xl shadow-lg max-w-4xl mx-auto">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+              title="Flash Forward Overview"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
       </section>
 
       <Footer />
