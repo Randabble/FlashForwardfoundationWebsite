@@ -85,7 +85,7 @@ export default function Team() {
       role: "Partnership Strategist",
       bio: "Builds bridges with sponsors, schools, and organizations to grow our support network.",
       longBio: "Samay forges meaningful partnerships that amplify our mission. By building trust and mutual benefit, he helps extend our reach and deepen our impact in both local and global communities.",
-      image: "/images/team/samayface.jpg",
+      image: "/images/team/samayface.jpeg",
       email: "#",
       linkedin: "#"
     },

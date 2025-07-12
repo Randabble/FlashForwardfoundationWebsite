@@ -47,7 +47,7 @@ export default function Footer() {
                 <Link href="/team">
                   <span className="text-gray-300 hover:text-primary transition-colors duration-200 cursor-pointer">
                     <i className="fa-solid fa-people-group"></i>
-                    Our Team
+                     Our Team
                   </span>
                 </Link>
               </li>

@@ -118,7 +118,7 @@ export default function About() {
                 <div className="text-center">
                   <div className="relative mb-4">
                     <img 
-                      src="/images/team/nithilanface.png"
+                      src="/images/team/nithilanface.jpeg"
                       alt="Nithilan Selakumar"
                       className="w-32 h-32 rounded-full mx-auto object-cover"
                     />
@@ -132,7 +132,7 @@ export default function About() {
                 <div className="text-center">
                   <div className="relative mb-4">
                     <img 
-                      src="/images/team/romirface.png"
+                      src="/images/team/romirface.jpeg"
                       alt="Romir Chekuri"
                       className="w-32 h-32 rounded-full mx-auto object-cover"
                     />
@@ -146,7 +146,7 @@ export default function About() {
                 <div className="text-center">
                   <div className="relative mb-4">
                     <img 
-                      src="samarthface.png"
+                      src="samarthface.jpeg"
                       alt="Samarth Morentsov"
                       className="w-32 h-32 rounded-full mx-auto object-cover"
                     />

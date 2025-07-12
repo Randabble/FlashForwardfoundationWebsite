@@ -47,7 +47,7 @@ export default function Impact() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-12 bg-gradient-to-br from-primary/5 to-accent/5">
+      {/* <section className="pt-20 pb-12 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 ref={titleRef} className="scroll-fade text-4xl sm:text-5xl lg:text-6xl font-bold text-dark mb-6">
             Our Impact
@@ -57,10 +57,10 @@ export default function Impact() {
             Lighting up education and transforming lives across off-grid communities in Ghana and beyond.
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* Impact Stats */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-8">
@@ -85,10 +85,10 @@ export default function Impact() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials Slideshow */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 ref={testimonialsRef} className="scroll-fade text-3xl font-bold text-gray-900 mb-12 text-center">
             Stories from Students
@@ -118,9 +118,9 @@ export default function Impact() {
                 </div>
               </div>
             </div>
-            
+             */}
             {/* Navigation dots */}
-            <div className="flex justify-center space-x-2 pb-6">
+            {/* <div className="flex justify-center space-x-2 pb-6">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
@@ -133,7 +133,7 @@ export default function Impact() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* How It Works */}
       <section className="py-16 bg-white">

@@ -26,8 +26,8 @@ export default function ImpactSection() {
             <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <i className="fas fa-users text-white text-3xl"></i>
             </div>
-            <div className="text-4xl sm:text-5xl font-bold text-dark mb-2">{studentsCounter.displayValue}</div>
-            <div className="text-lg font-semibold text-gray-800 mb-2">Million+ Students</div>
+            <div className="text-4xl sm:text-5xl font-bold text-dark mb-2">100M+</div>
+            <div className="text-lg font-semibold text-gray-800 mb-2">Students</div>
             <p className="text-gray-600">Globally lack access to electricity for studying</p>
           </div>
 
@@ -35,7 +35,7 @@ export default function ImpactSection() {
             <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <i className="fas fa-moon text-white text-3xl"></i>
             </div>
-            <div className="text-4xl sm:text-5xl font-bold text-dark mb-2">{percentCounter.displayValue}</div>
+            <div className="text-4xl sm:text-5xl font-bold text-dark mb-2">70%</div>
             <div className="text-lg font-semibold text-gray-800 mb-2">% Less Study Time</div>
             <p className="text-gray-600">Students in off-grid homes study after sunset</p>
           </div>
