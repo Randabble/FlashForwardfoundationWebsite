@@ -10,7 +10,7 @@ export default function Team() {
   const teamMembers = [
     {
       name: "Sree Kokkonda",
-      role: "President & Executive Director",
+      role: "President",
       bio: "Leads the team with vision and direction, passionate about combining technology and social impact.",
       longBio: "Sree leads our team with passion for using technology to address real-world issues. With a background in nonprofit leadership, he focuses on strategic planning, empowering team members, and aligning our mission with long-term impact.",
       image: "/images/team/sreeface.jpeg",
@@ -19,7 +19,7 @@ export default function Team() {
     },
     {
       name: "Nithilan Selvakumar",
-      role: "Vice President & Executive Director",
+      role: "Vice President",
       bio: "Handles the paperwork side—researching laws, partnerships, and ensuring we operate responsibly.",
       longBio: "Nithilan keeps our operations compliant and sustainable by managing research, legal documentation, and responsible practices. His focus on thoughtful infrastructure ensures we scale effectively and ethically.",
       image: "/images/team/nithilanface.jpeg",
@@ -28,7 +28,7 @@ export default function Team() {
     },
     {
       name: "Romir Chekuri",
-      role: "Treasurer & Executive Director",
+      role: "Treasurer",
       bio: "Manages our budget, tracks donations, and ensures every dollar is spent wisely.",
       longBio: "Romir ensures financial transparency and efficiency across the organization. With an analytical mind and a heart for service, he ensures all funding is aligned with our mission to create impact where it's needed most.",
       image: "/images/team/romirface.jpeg",
@@ -37,10 +37,19 @@ export default function Team() {
     },
     {
       name: "Samarth Morentsov",
-      role: "Secretary & Executive Director",
+      role: "Secretary",
       bio: "Keeps us organized by documenting meetings, records, and keeping everyone in sync.",
       longBio: "Samarth is the organizational backbone of our team, ensuring accountability and clarity through precise documentation and scheduling. He makes sure our goals stay visible and on track.",
       image: "/images/team/samarthface.jpeg",
+      email: "#",
+      linkedin: "#"
+    },
+    {
+      name: "Muzaffar Hussain",
+      role: "Marketing & Outreach Lead",
+      bio: "Spreads the word through impactful campaigns that build awareness and support.",
+      longBio: "Muzaffar crafts compelling campaigns to amplify our mission. From social media strategy to community outreach, he helps tell the Flash Forward story in a way that inspires action.",
+      image: "/images/team/sakshamface.jpeg",
       email: "#",
       linkedin: "#"
     },
@@ -54,47 +63,20 @@ export default function Team() {
       linkedin: "#"
     },
     {
-      name: "Aarush Sureddi",
-      role: "Market Research Lead",
-      bio: "Dives into global needs to help deliver our flashlights where they matter most.",
-      longBio: "Aarush conducts in-depth market research to ensure our solutions meet the real needs of underserved communities. He combines data with empathy to guide outreach and expansion.",
-      image: "/images/team/aarushface.jpeg",
-      email: "#",
-      linkedin: "#"
-    },
-    {
       name: "Saksham Gupta",
-      role: "Marketing & Outreach Lead",
-      bio: "Spreads the word through impactful campaigns that build awareness and support.",
-      longBio: "Saksham crafts compelling campaigns to amplify our mission. From social media strategy to community outreach, he helps tell the Flash Forward story in a way that inspires action.",
+      role: "Workshop Lead",
+      bio: "Leads hands-on workshops that empower students to learn and build with confidence.",
+      longBio: "Saksham designs and facilitates engaging workshops that bring technical concepts to life. By guiding students through practical, interactive sessions, he helps them gain real skills and the confidence to innovate.",
       image: "/images/team/sakshamface.jpeg",
       email: "#",
       linkedin: "#"
     },
     {
-      name: "Yekalaivan Aiyanar",
-      role: "Digital Design Lead",
-      bio: "Designs and manages our website to keep everything engaging and mission-focused.",
-      longBio: "Yekalaivan is the creative engine behind our digital presence. From UX/UI to web visuals, he makes sure our platform reflects our values while being accessible and intuitive.",
-      image: "/images/team/yekaface.jpeg",
-      email: "#",
-      linkedin: "#"
-    },
-    {
-      name: "Samay Sheth",
-      role: "Partnership Strategist",
-      bio: "Builds bridges with sponsors, schools, and organizations to grow our support network.",
-      longBio: "Samay forges meaningful partnerships that amplify our mission. By building trust and mutual benefit, he helps extend our reach and deepen our impact in both local and global communities.",
-      image: "/images/team/samayface.jpeg",
-      email: "#",
-      linkedin: "#"
-    },
-    {
-      name: "Arya Karnati",
-      role: "Web Development Lead",
-      bio: "Turns designs into responsive, reliable code that powers our online presence.",
-      longBio: "Arya leads the technical buildout of our website, ensuring performance, accessibility, and seamless experience. He translates design into code with a focus on reliability and scalability.",
-      image: "/images/team/aryaface.jpeg",
+      name: "Shreyas Prabhu",
+      role: "Engineering Lead",
+      bio: "Drives engineering projects with creativity and precision to push our mission forward.",
+      longBio: "Shreyas leads the technical development behind Flash Forward. From prototyping and product design to problem-solving complex challenges, he ensures our engineering work is both innovative and impactful.",
+      image: "/images/team/shreyasface.jpeg",
       email: "#",
       linkedin: "#"
     }
