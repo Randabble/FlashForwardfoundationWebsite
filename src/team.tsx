@@ -49,7 +49,7 @@ export default function Team() {
       role: "Marketing & Outreach Lead",
       bio: "Spreads the word through impactful campaigns that build awareness and support.",
       longBio: "Muzaffar crafts compelling campaigns to amplify our mission. From social media strategy to community outreach, he helps tell the Flash Forward story in a way that inspires action.",
-      image: "/images/team/sakshamface.jpeg",
+      image: "/images/team/muzaffarface.jpeg",
       email: "#",
       linkedin: "#"
     },
