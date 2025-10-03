@@ -63,15 +63,6 @@ export default function Team() {
       linkedin: "#"
     },
     {
-      name: "Saksham Gupta",
-      role: "Workshop Lead",
-      bio: "Leads hands-on workshops that empower students to learn and build with confidence.",
-      longBio: "Saksham designs and facilitates engaging workshops that bring technical concepts to life. By guiding students through practical, interactive sessions, he helps them gain real skills and the confidence to innovate.",
-      image: "/images/team/sakshamface.jpeg",
-      email: "#",
-      linkedin: "#"
-    },
-    {
       name: "Shreyas Prabhu",
       role: "Engineering Lead",
       bio: "Drives engineering projects with creativity and precision to push our mission forward.",
@@ -85,7 +76,7 @@ export default function Team() {
   return (
     <div className="font-sans">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-12 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -110,27 +101,27 @@ export default function Team() {
                   <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
                     <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
                       <div className="relative flex-shrink-0">
-                        <img 
+                        <img
                           src={member.image}
                           alt={`${member.name} - ${member.role}`}
                           className="w-24 h-24 rounded-full object-cover border-4 border-gray-200"
                         />
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full w-24 h-24"></div>
                       </div>
-                      
+
                       <div className="flex-1 text-center sm:text-left">
                         <h3 className="text-2xl font-bold text-dark mb-1">{member.name}</h3>
                         <p className="text-primary font-semibold mb-3">{member.role}</p>
                         <p className="text-gray-600 mb-4 leading-relaxed">{member.longBio}</p>
-                        
+
                         <div className="flex justify-center sm:justify-start space-x-4">
-                          <a 
+                          <a
                             href={`mailto:${member.email}`}
                             className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-200"
                           >
                             <i className="fas fa-envelope"></i>
                           </a>
-                          <a 
+                          <a
                             href={member.linkedin}
                             className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-200"
                           >
@@ -152,11 +143,11 @@ export default function Team() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-dark mb-6">Want to Join Our Team?</h2>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            We're always looking for passionate students who want to make a difference. 
-            Whether you're interested in engineering, marketing, operations, or something else entirely, 
+            We're always looking for passionate students who want to make a difference.
+            Whether you're interested in engineering, marketing, operations, or something else entirely,
             we'd love to hear from you.
           </p>
-          <a 
+          <a
             href="mailto:contact@flashforwardfoundation.org?subject=Joining the Team"
             className="inline-flex items-center bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary/90 transition-colors duration-200"
           >
