@@ -32,7 +32,7 @@ export default function HeroSection() {
           showElements.title ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           Lighting the Future, 
-          <span className="text-primary"> One Flashlight</span> 
+          <span className="text-primary"> One Flashlight </span> 
           at a Time
         </h1>
         
