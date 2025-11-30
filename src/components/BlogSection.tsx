@@ -46,16 +46,16 @@ export default function BlogSection() {
     <section id="blog" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 ref={titleRef} className="scroll-fade text-4xl sm:text-5xl font-bold text-dark mb-6">In the Field & Behind the Scenes</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
-          <p ref={descRef} className="scroll-fade text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 ref={titleRef} className="text-4xl sm:text-5xl font-bold text-dark mb-6">In the Field & Behind the Scenes</h2>
+          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+          <p ref={descRef} className="text-xl text-gray-600 max-w-3xl mx-auto">
             Follow our journey from the engineering lab to rural villages as we work to light up education worldwide.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (
-            <article key={post.title} ref={postRefs[index]} className="scroll-fade bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <article key={post.title} ref={postRefs[index]} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
               <img 
                 src={post.image}
                 alt={post.title}
@@ -83,7 +83,7 @@ export default function BlogSection() {
           ))}
         </div>
 
-        <div ref={buttonRef} className="scroll-fade text-center mt-12">
+        <div ref={buttonRef} className="text-center mt-12">
           <a 
             href="/blog"
             className="inline-flex items-center bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200"

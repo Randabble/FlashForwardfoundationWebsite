@@ -1,5 +1,5 @@
 import React from "react";
-import Navigation from "./components/Navigation";
+import AnimatedNav from "./components/AnimatedNav";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
 import ImpactSection from "./components/ImpactSection";
@@ -14,7 +14,7 @@ import BackToTop from "./components/BackToTop";
 export default function Home() {
   return (
     <div className="font-sans">
-      <Navigation />
+      <AnimatedNav />
       <HeroSection />
       <AboutSection />
       <ImpactSection />

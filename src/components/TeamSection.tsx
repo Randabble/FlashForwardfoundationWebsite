@@ -56,23 +56,23 @@ export default function TeamSection() {
     <section id="team" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 ref={titleRef} className="scroll-fade text-4xl sm:text-5xl font-bold text-dark mb-6">Meet the Students Behind the Mission</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
-          <p ref={descRef} className="scroll-fade text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 ref={titleRef} className="text-4xl sm:text-5xl font-bold text-dark mb-6">Meet the Students Behind the Mission</h2>
+          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+          <p ref={descRef} className="text-xl text-gray-600 max-w-3xl mx-auto">
             Our diverse team of passionate high school students combines engineering, business, and social impact expertise.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
-            <div key={member.name} ref={memberRefs[index]} className="scroll-fade text-center group">
+            <div key={member.name} ref={memberRefs[index]} className="text-center group">
               <div className="relative mb-6">
-                <img 
+                <img
                   src={member.image}
                   alt={`${member.name} - ${member.role}`}
                   className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-gray-200 group-hover:border-primary transition-colors duration-200"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full w-32 h-32 mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                <div className="absolute inset-0 bg-primary/20 rounded-full w-32 h-32 mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
               </div>
               <h3 className="text-xl font-semibold text-dark mb-1">{member.name}</h3>
               <p className="text-primary font-medium mb-2">{member.role}</p>

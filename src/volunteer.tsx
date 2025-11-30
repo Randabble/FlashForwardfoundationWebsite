@@ -1,5 +1,5 @@
 import React from "react";
-import Navigation from "./components/Navigation";
+import AnimatedNav from "./components/AnimatedNav";
 import Footer from "./components/Footer";
 import { useScrollAnimation } from "./hooks/useScrollAnimation";
 import { useState } from 'react';
@@ -55,15 +55,15 @@ export default function Volunteer() {
 
   return (
     <div className="font-sans">
-      <Navigation />
-      
+      <AnimatedNav />
+
       {/* Hero Section */}
-      <section className="pt-20 pb-12 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section className="pt-20 pb-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 ref={titleRef} className="scroll-fade text-4xl sm:text-5xl lg:text-6xl font-bold text-dark mb-6">
+          <h1 ref={titleRef} className="text-4xl sm:text-5xl lg:text-6xl font-bold text-dark mb-6">
             Volunteer With Us
           </h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 leading-relaxed">
             Join our student-led movement to bring light to education and make a real difference in the lives of students worldwide.
           </p>
@@ -79,26 +79,26 @@ export default function Volunteer() {
               <p className="text-lg text-gray-700 mb-6">
                 As a volunteer with Flash Forward, you'll be part of a dynamic team of students working to address one of the world's most pressing challenges: energy poverty. Our volunteers gain valuable experience while making a meaningful impact.
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-primary/10 rounded-lg p-6">
                   <i className="fas fa-hands-helping text-primary text-2xl mb-4"></i>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Make Real Impact</h3>
                   <p className="text-gray-700">Help design and distribute solar flashlights that directly improve educational outcomes for students in Ghana.</p>
                 </div>
-                
+
                 <div className="bg-accent/10 rounded-lg p-6">
                   <i className="fas fa-tools text-accent text-2xl mb-4"></i>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Gain STEM Skills</h3>
                   <p className="text-gray-700">Learn 3D modeling, circuit design, soldering, and project management through hands-on experience.</p>
                 </div>
-                
+
                 <div className="bg-primary/10 rounded-lg p-6">
                   <i className="fas fa-users text-primary text-2xl mb-4"></i>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Build Community</h3>
                   <p className="text-gray-700">Connect with like-minded students who share your passion for social impact and innovation.</p>
                 </div>
-                
+
                 <div className="bg-accent/10 rounded-lg p-6">
                   <i className="fas fa-certificate text-accent text-2xl mb-4"></i>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Develop Leadership</h3>
@@ -106,9 +106,9 @@ export default function Volunteer() {
                 </div>
               </div>
             </div>
-            
+
             <div>
-              <img 
+              <img
                 src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                 alt="Students volunteering"
                 className="rounded-lg shadow-lg"
@@ -122,7 +122,7 @@ export default function Volunteer() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Volunteer Opportunities</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <i className="fas fa-cogs text-primary text-3xl mb-4"></i>
@@ -134,7 +134,7 @@ export default function Volunteer() {
                 <li>• Product improvement iterations</li>
               </ul>
             </div>
-            
+
             <div className="bg-white rounded-lg shadow-lg p-6">
               <i className="fas fa-chart-line text-primary text-3xl mb-4"></i>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Business & Operations</h3>
@@ -145,7 +145,7 @@ export default function Volunteer() {
                 <li>• Financial planning</li>
               </ul>
             </div>
-            
+
             <div className="bg-white rounded-lg shadow-lg p-6">
               <i className="fas fa-bullhorn text-primary text-3xl mb-4"></i>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Advocacy & Outreach</h3>
@@ -156,7 +156,7 @@ export default function Volunteer() {
                 <li>• Community presentations</li>
               </ul>
             </div>
-            
+
             <div className="bg-white rounded-lg shadow-lg p-6">
               <i className="fas fa-pen-fancy text-primary text-3xl mb-4"></i>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Content & Communications</h3>
@@ -167,7 +167,7 @@ export default function Volunteer() {
                 <li>• Website maintenance</li>
               </ul>
             </div>
-            
+
             <div className="bg-white rounded-lg shadow-lg p-6">
               <i className="fas fa-dollar-sign text-primary text-3xl mb-4"></i>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Fundraising</h3>
@@ -178,7 +178,7 @@ export default function Volunteer() {
                 <li>• Donor relations</li>
               </ul>
             </div>
-            
+
             <div className="bg-white rounded-lg shadow-lg p-6">
               <i className="fas fa-chart-pie text-primary text-3xl mb-4"></i>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Research & Impact</h3>
@@ -197,7 +197,7 @@ export default function Volunteer() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Apply to Volunteer</h2>
-          
+
           <div className="bg-gray-50 rounded-lg p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -215,7 +215,7 @@ export default function Volunteer() {
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
@@ -231,7 +231,7 @@ export default function Volunteer() {
                   />
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
@@ -246,7 +246,7 @@ export default function Volunteer() {
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="school" className="block text-sm font-medium text-gray-700 mb-2">
                     School/Organization
@@ -261,7 +261,7 @@ export default function Volunteer() {
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="skills" className="block text-sm font-medium text-gray-700 mb-2">
                   Skills & Interests
@@ -276,7 +276,7 @@ export default function Volunteer() {
                   placeholder="Tell us about your skills, interests, and areas where you'd like to contribute..."
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="availability" className="block text-sm font-medium text-gray-700 mb-2">
                   Availability
@@ -295,7 +295,7 @@ export default function Volunteer() {
                   <option value="More than 10 hours per week">More than 10 hours per week</option>
                 </select>
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Why do you want to volunteer with Flash Forward?
@@ -310,7 +310,7 @@ export default function Volunteer() {
                   placeholder="Share your motivation for joining our team..."
                 />
               </div>
-              
+
               <div className="text-center">
                 <button
                   type="submit"

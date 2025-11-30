@@ -1,5 +1,5 @@
 import React from "react";
-import Navigation from "./components/Navigation";
+import AnimatedNav from "./components/AnimatedNav";
 import Footer from "./components/Footer";
 import { useScrollAnimation } from "./hooks/useScrollAnimation";
 
@@ -75,16 +75,16 @@ export default function Team() {
 
   return (
     <div className="font-sans">
-      <Navigation />
+      <AnimatedNav />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-12 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section className="pt-20 pb-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 ref={titleRef} className="scroll-fade text-4xl sm:text-5xl lg:text-6xl font-bold text-dark mb-6">
+          <h1 ref={titleRef} className="text-4xl sm:text-5xl lg:text-6xl font-bold text-dark mb-6">
             Meet Our Team
           </h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
-          <p ref={descRef} className="scroll-fade text-xl text-gray-600 leading-relaxed">
+          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+          <p ref={descRef} className="text-xl text-gray-600 leading-relaxed">
             The passionate students behind Flash Forward, working together to light up education worldwide.
           </p>
         </div>
@@ -97,7 +97,7 @@ export default function Team() {
             {teamMembers.map((member, index) => {
               const memberRef = useScrollAnimation();
               return (
-                <div key={member.name} ref={memberRef} className="scroll-fade">
+                <div key={member.name} ref={memberRef}>
                   <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
                     <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
                       <div className="relative flex-shrink-0">
@@ -106,7 +106,7 @@ export default function Team() {
                           alt={`${member.name} - ${member.role}`}
                           className="w-24 h-24 rounded-full object-cover border-4 border-gray-200"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full w-24 h-24"></div>
+                        <div className="absolute inset-0 bg-primary/20 rounded-full w-24 h-24"></div>
                       </div>
 
                       <div className="flex-1 text-center sm:text-left">

@@ -7,16 +7,16 @@ export default function CTASection() {
   const buttonsRef = useScrollAnimation();
 
   return (
-    <section className="py-20 bg-gradient-to-br from-secondary to-accent text-white relative overflow-hidden">
+    <section className="py-20 bg-secondary text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-black/20"></div>
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 ref={titleRef} className="scroll-fade text-4xl sm:text-5xl font-bold mb-6">
+        <h2 ref={titleRef} className="text-4xl sm:text-5xl font-bold mb-6">
           Help Us Bring Safe, Sustainable Light to Students Around the World
         </h2>
-        <p ref={descRef} className="scroll-fade text-xl mb-8 text-white/90">
+        <p ref={descRef} className="text-xl mb-8 text-white/90">
           Your support can light up education and create opportunities for thousands of students in off-grid communities.
         </p>
-        <div ref={buttonsRef} className="scroll-fade flex flex-col sm:flex-row gap-4 justify-center">
+        <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center">
           <a 
             href="https://gofund.me/436b67db" 
             target="_blank" 

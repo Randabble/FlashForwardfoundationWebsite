@@ -1,7 +1,11 @@
 import { Link, useLocation } from 'wouter';
+import { useState } from 'react';
 
 export default function Footer() {
   const [location] = useLocation();
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
   const scrollToSection = (sectionId: string) => {
     if (location === '/') {
@@ -16,6 +20,36 @@ export default function Footer() {
       }
     } else {
       window.location.href = `/#${sectionId}`;
+    }
+  };
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setMessage(null);
+
+    try {
+      const response = await fetch('/api/newsletter/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        setMessage({ type: 'success', text: 'Successfully subscribed! Check your email.' });
+        setEmail('');
+      } else {
+        const data = await response.json();
+        setMessage({ type: 'error', text: data.message || 'Failed to subscribe. Please try again.' });
+      }
+    } catch (error) {
+      console.error('Newsletter subscription error:', error);
+      setMessage({ type: 'error', text: 'An error occurred. Please try again later.' });
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setMessage(null), 5000);
     }
   };
 
@@ -47,7 +81,7 @@ export default function Footer() {
                 <Link href="/team">
                   <span className="text-gray-300 hover:text-primary transition-colors duration-200 cursor-pointer">
                     <i className="fa-solid fa-people-group"></i>
-                     Our Team
+                    &nbsp;Our Team
                   </span>
                 </Link>
               </li>
@@ -83,35 +117,52 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Newsletter */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-primary">Contact</h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <i className="fas fa-envelope text-primary"></i>
-                <a 
-                  href="mailto:flashforwardnp@gmail.com"
-                  className="text-gray-300 hover:underline"
-                >
-                  flashforwardnp@gmail.com
-                </a>
+            <h3 className="text-xl font-bold mb-4 text-primary">Stay Updated</h3>
+            <p className="text-gray-300 mb-4 text-sm">
+              Get the latest updates on our impact, new products, and stories from the field.
+            </p>
+            <form onSubmit={handleNewsletterSubmit} className="space-y-3">
+              <div>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                />
               </div>
-              <div className="flex items-center space-x-3">
-                <i className="fas fa-map-marker-alt text-primary"></i>
-                <span className="text-gray-300">Bellevue, WA</span>
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+              >
+                {isSubmitting ? (
+                  <>
+                    <i className="fas fa-spinner fa-spin mr-2"></i>
+                    Subscribing...
+                  </>
+                ) : (
+                  <>
+                    <i className="fas fa-envelope mr-2"></i>
+                    Subscribe
+                  </>
+                )}
+              </button>
+            </form>
+            {message && (
+              <div
+                className={`mt-3 p-3 rounded-lg text-sm ${message.type === 'success'
+                    ? 'bg-green-500/20 text-green-300 border border-green-500/30'
+                    : 'bg-red-500/20 text-red-300 border border-red-500/30'
+                  }`}
+              >
+                <i className={`fas ${message.type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'} mr-2`}></i>
+                {message.text}
               </div>
-              <div className="flex items-center space-x-3">
-                <i className="fas fa-at text-primary"></i>
-                <a 
-                  href="https://instagram.com/flashforwardfoundation" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:underline"
-                >
-                  @flashforwardfoundation
-                </a>
-              </div>
-            </div>
+            )}
           </div>
         </div>
 

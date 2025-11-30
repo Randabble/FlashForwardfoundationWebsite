@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from 'react';
 import { Link } from "wouter";
-import Navigation from "./components/Navigation";
+import AnimatedNav from "./components/AnimatedNav";
 import Footer from "./components/Footer";
 import { useScrollAnimation } from "./hooks/useScrollAnimation";
 
@@ -80,8 +80,8 @@ export default function Blog() {
 
   const categories = ['All', 'Research', 'Health', 'Stories', 'Technology', 'Environment', 'Social Impact'];
 
-  const filteredPosts = selectedCategory === 'All' 
-    ? blogPosts 
+  const filteredPosts = selectedCategory === 'All'
+    ? blogPosts
     : blogPosts.filter(post => post.category === selectedCategory);
 
   const featuredPost = blogPosts.find(post => post.featured);
@@ -89,15 +89,15 @@ export default function Blog() {
 
   return (
     <div className="font-sans">
-      <Navigation />
-      
+      <AnimatedNav />
+
       {/* Hero Section */}
-      <section className="pt-20 pb-12 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section className="pt-20 pb-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 ref={titleRef} className="scroll-fade text-4xl sm:text-5xl lg:text-6xl font-bold text-dark mb-6">
+          <h1 ref={titleRef} className="text-4xl sm:text-5xl lg:text-6xl font-bold text-dark mb-6">
             Blog & Stories
           </h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 leading-relaxed">
             Insights, research, and stories from our mission to end energy poverty through education.
           </p>
@@ -108,10 +108,10 @@ export default function Blog() {
       {featuredPost && (
         <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg overflow-hidden shadow-lg">
+            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                 <div className="relative">
-                  <img 
+                  <img
                     src={featuredPost.image}
                     alt={featuredPost.title}
                     className="w-full h-64 lg:h-full object-cover"
@@ -162,11 +162,10 @@ export default function Blog() {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
-                  selectedCategory === category
-                    ? 'bg-primary text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-100'
-                }`}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${selectedCategory === category
+                  ? 'bg-primary text-white'
+                  : 'bg-white text-gray-700 hover:bg-gray-100'
+                  }`}
               >
                 {category}
               </button>
@@ -182,20 +181,19 @@ export default function Blog() {
             {regularPosts.map((post) => (
               <article key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="relative">
-                  <img 
+                  <img
                     src={post.image}
                     alt={post.title}
                     className="w-full h-48 object-cover"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      post.category === 'Research' ? 'bg-blue-100 text-blue-800' :
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${post.category === 'Research' ? 'bg-blue-100 text-blue-800' :
                       post.category === 'Health' ? 'bg-red-100 text-red-800' :
-                      post.category === 'Stories' ? 'bg-green-100 text-green-800' :
-                      post.category === 'Technology' ? 'bg-purple-100 text-purple-800' :
-                      post.category === 'Environment' ? 'bg-emerald-100 text-emerald-800' :
-                      'bg-pink-100 text-pink-800'
-                    }`}>
+                        post.category === 'Stories' ? 'bg-green-100 text-green-800' :
+                          post.category === 'Technology' ? 'bg-purple-100 text-purple-800' :
+                            post.category === 'Environment' ? 'bg-emerald-100 text-emerald-800' :
+                              'bg-pink-100 text-pink-800'
+                      }`}>
                       {post.category}
                     </span>
                   </div>
@@ -227,23 +225,23 @@ export default function Blog() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-br from-primary to-accent text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Join the Conversation</h2>
           <p className="text-xl mb-8 opacity-90">
             Stay updated with our latest research, stories, and insights on energy poverty and education.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://gofund.me/436b67db" 
-              target="_blank" 
+            <a
+              href="https://gofund.me/436b67db"
+              target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             >
               <i className="fas fa-heart mr-2"></i>
               Support Our Mission
             </a>
-            <a 
+            <a
               href="/contact"
               className="bg-white/20 backdrop-blur-sm text-white border-2 border-white/30 px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors duration-200"
             >
