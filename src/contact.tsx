@@ -1,5 +1,5 @@
 import React from "react";
-import Navigation from "./components/Navigation";
+import AnimatedNav from "./components/AnimatedNav";
 import Footer from "./components/Footer";
 import { useScrollAnimation } from "./hooks/useScrollAnimation";
 import { useState } from 'react';
@@ -55,16 +55,16 @@ export default function Contact() {
 
   return (
     <div className="font-sans">
-      <Navigation />
-      
+      <AnimatedNav />
+
       {/* Hero Section */}
-      <section className="pt-20 pb-12 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section className="pt-20 pb-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 ref={titleRef} className="scroll-fade text-4xl sm:text-5xl lg:text-6xl font-bold text-dark mb-6">
+          <h1 ref={titleRef} className="text-4xl sm:text-5xl lg:text-6xl font-bold text-dark mb-6">
             Get in Touch
           </h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
-          <p className="scroll-fade text-xl text-gray-600 leading-relaxed">
+          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+          <p className="text-xl text-gray-600 leading-relaxed">
             Have questions about our mission? Want to get involved? We'd love to hear from you.
           </p>
         </div>
@@ -74,11 +74,11 @@ export default function Contact() {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
+
             {/* Contact Form */}
-            <div ref={formRef} className="scroll-fade">
+            <div ref={formRef}>
               <h2 className="text-3xl font-bold text-dark mb-8">Send us a Message</h2>
-              
+
               {isSubmitted ? (
                 <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
                   <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -88,7 +88,7 @@ export default function Contact() {
                   <p className="text-green-600">
                     Thank you for reaching out. We'll get back to you within 24 hours.
                   </p>
-                  <button 
+                  <button
                     onClick={() => setIsSubmitted(false)}
                     className="mt-4 text-primary font-medium hover:text-primary/80 transition-colors duration-200"
                   >
@@ -129,7 +129,7 @@ export default function Contact() {
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
                       Subject *
@@ -152,7 +152,7 @@ export default function Contact() {
                       <option value="Other">Other</option>
                     </select>
                   </div>
-                  
+
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                       Your Message *
@@ -168,15 +168,14 @@ export default function Contact() {
                       placeholder="Tell us more about your inquiry..."
                     />
                   </div>
-                  
+
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full py-4 px-6 rounded-lg font-semibold transition-colors duration-200 ${
-                      isSubmitting
-                        ? 'bg-gray-400 text-white cursor-not-allowed'
-                        : 'bg-primary text-white hover:bg-primary/90'
-                    }`}
+                    className={`w-full py-4 px-6 rounded-lg font-semibold transition-colors duration-200 ${isSubmitting
+                      ? 'bg-gray-400 text-white cursor-not-allowed'
+                      : 'bg-primary text-white hover:bg-primary/90'
+                      }`}
                   >
                     {isSubmitting ? (
                       <>
@@ -193,20 +192,20 @@ export default function Contact() {
                 </form>
               )}
             </div>
-            
+
             {/* Contact Information */}
-            <div ref={infoRef} className="scroll-fade">
+            <div ref={infoRef}>
               <h2 className="text-3xl font-bold text-dark mb-8">Contact Information</h2>
-              
+
               <div className="space-y-6 mb-8">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                     <i className="fas fa-envelope text-white text-xl"></i>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-dark mb-1">Email Us</h3>
                     <p className="text-gray-600 mb-2">We typically respond within 24 hours</p>
-                    <a 
+                    <a
                       href="mailto:flashforwardnp@gmail.com"
                       className="text-primary font-medium hover:text-primary/80 transition-colors duration-200"
                     >
@@ -214,9 +213,9 @@ export default function Contact() {
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-secondary to-primary rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
                     <i className="fas fa-map-marker-alt text-white text-xl"></i>
                   </div>
                   <div>
@@ -225,9 +224,9 @@ export default function Contact() {
                     <p className="text-gray-600">Bellevue, WA, USA</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-accent to-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
                     <i className="fas fa-clock text-white text-xl"></i>
                   </div>
                   <div>
@@ -237,7 +236,7 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Social Media */}
               <div className="bg-gray-50 rounded-2xl p-6">
                 <h3 className="text-xl font-semibold text-dark mb-4">Follow Our Journey</h3>
@@ -245,26 +244,26 @@ export default function Contact() {
                   Stay updated on our latest projects, impact stories, and behind-the-scenes content.
                 </p>
                 <div className="flex space-x-4">
-                  <a 
-                    href="https://www.instagram.com/flashforwardfoundation/" 
+                  <a
+                    href="https://www.instagram.com/flashforwardfoundation/"
                     className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg"
                   >
                     <i className="fab fa-instagram"></i>
                   </a>
-                  <a 
-                    href="https://www.tiktok.com/@flashforwardfoundation" 
+                  <a
+                    href="https://www.tiktok.com/@flashforwardfoundation"
                     className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg"
                   >
                     <i className="fab fa-tiktok"></i>
                   </a>
-                  <a 
-                    href="https://www.linkedin.com/in/flash-forward-910944352/" 
+                  <a
+                    href="https://www.linkedin.com/in/flash-forward-910944352/"
                     className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg"
                   >
                     <i className="fab fa-linkedin"></i>
                   </a>
-                  <a 
-                    href="https://www.youtube.com/@FlashForwardFoundation" 
+                  <a
+                    href="https://www.youtube.com/@FlashForwardFoundation"
                     className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg"
                   >
                     <i className="fab fa-youtube"></i>
@@ -272,15 +271,15 @@ export default function Contact() {
                 </div>
                 <p className="text-sm text-gray-500 mt-3">@flashforwardfoundation</p>
               </div>
-              
+
               {/* FAQ Link */}
-              <div className="mt-8 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-6">
+              <div className="mt-8 bg-gray-50 rounded-2xl p-6">
                 <h3 className="text-xl font-semibold text-dark mb-2">Have a Quick Question?</h3>
                 <p className="text-gray-600 mb-4">
-                  Check out our FAQ section for answers to common questions about our mission, 
+                  Check out our FAQ section for answers to common questions about our mission,
                   technology, and impact.
                 </p>
-                <a 
+                <a
                   href="/#faq"
                   className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors duration-200"
                 >

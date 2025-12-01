@@ -1,5 +1,5 @@
 import React from "react";
-import Navigation from "./components/Navigation";
+import AnimatedNav from "./components/AnimatedNav";
 import Footer from "./components/Footer";
 import { useScrollAnimation } from "./hooks/useScrollAnimation";
 
@@ -11,16 +11,16 @@ export default function About() {
 
   return (
     <div className="font-sans">
-      <Navigation />
-      
+      <AnimatedNav />
+
       {/* Hero Section */}
-      <section className="pt-20 pb-12 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section className="pt-20 pb-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 ref={titleRef} className="scroll-fade text-4xl sm:text-5xl lg:text-6xl font-bold text-dark mb-6">
+          <h1 ref={titleRef} className="text-4xl sm:text-5xl lg:text-6xl font-bold text-dark mb-6">
             About Flash Forward
           </h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
-          <p ref={missionRef} className="scroll-fade text-xl text-gray-600 leading-relaxed">
+          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+          <p ref={missionRef} className="text-xl text-gray-600 leading-relaxed">
             We're a student-led nonprofit organization dedicated to bringing solar-powered light to children in off-grid communities across Ghana and beyond.
           </p>
         </div>
@@ -61,8 +61,8 @@ export default function About() {
               </div>
             </div>
             <div>
-              <img 
-                src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600" 
+              <img
+                src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600"
                 alt="Students studying with solar lights"
                 className="rounded-lg shadow-lg"
               />
@@ -75,7 +75,7 @@ export default function About() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 ref={storyRef} className="scroll-fade text-3xl font-bold text-gray-900 mb-8 text-center">Our Team Story</h2>
+            <h2 ref={storyRef} className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Team Story</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
               <div>
                 <p className="text-lg text-gray-700 mb-6">
@@ -89,8 +89,8 @@ export default function About() {
                 </p>
               </div>
               <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600" 
+                <img
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600"
                   alt="Team working together"
                   className="rounded-lg shadow-lg"
                 />
@@ -103,7 +103,7 @@ export default function About() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="text-center">
                   <div className="relative mb-4">
-                    <img 
+                    <img
                       src="/images/team/sreeface.jpeg"
                       alt="Sree Kokkonda"
                       className="w-32 h-32 rounded-full mx-auto object-cover"
@@ -117,7 +117,7 @@ export default function About() {
 
                 <div className="text-center">
                   <div className="relative mb-4">
-                    <img 
+                    <img
                       src="/images/team/nithilanface.jpeg"
                       alt="Nithilan Selakumar"
                       className="w-32 h-32 rounded-full mx-auto object-cover"
@@ -131,7 +131,7 @@ export default function About() {
 
                 <div className="text-center">
                   <div className="relative mb-4">
-                    <img 
+                    <img
                       src="/images/team/romirface.jpeg"
                       alt="Romir Chekuri"
                       className="w-32 h-32 rounded-full mx-auto object-cover"
@@ -145,7 +145,7 @@ export default function About() {
 
                 <div className="text-center">
                   <div className="relative mb-4">
-                    <img 
+                    <img
                       src="/images/team/samarthface.jpeg"
                       alt="Samarth Morentsov"
                       className="w-32 h-32 rounded-full mx-auto object-cover"
@@ -164,14 +164,14 @@ export default function About() {
                   We're always looking for passionate students, educators, and professionals who want to make a difference in global education and energy access.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a 
+                  <a
                     href="/volunteer"
                     className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200"
                   >
                     <i className="fas fa-hands-helping mr-2"></i>
                     Volunteer With Us
                   </a>
-                  <a 
+                  <a
                     href="/partner"
                     className="bg-white text-primary border-2 border-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary/10 transition-colors duration-200"
                   >
@@ -189,7 +189,7 @@ export default function About() {
       <section className="py-16 bg-white" id="faq">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gray-50 rounded-lg shadow-lg p-8">
-            <h2 ref={faqRef} className="scroll-fade text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <h2 ref={faqRef} className="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
             <div className="space-y-6">
               <div className="border-l-4 border-primary pl-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">How do the solar flashlights work?</h3>
@@ -233,23 +233,23 @@ export default function About() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-br from-primary to-accent text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Join Our Mission</h2>
           <p className="text-xl mb-8 opacity-90">
             Together, we can light up education and create brighter futures for children around the world.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://gofund.me/436b67db" 
-              target="_blank" 
+            <a
+              href="https://gofund.me/436b67db"
+              target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             >
               <i className="fas fa-heart mr-2"></i>
               Donate Now
             </a>
-            <a 
+            <a
               href="/contact"
               className="bg-white/20 backdrop-blur-sm text-white border-2 border-white/30 px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors duration-200"
             >

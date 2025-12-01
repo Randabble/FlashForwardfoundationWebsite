@@ -1,13 +1,13 @@
 import React from "react";
 import { useRoute, Link } from "wouter";
-import Navigation from "./components/Navigation";
+import AnimatedNav from "./components/AnimatedNav";
 import Footer from "./components/Footer";
 import { useScrollAnimation } from "./hooks/useScrollAnimation";
 
 export default function BlogPost() {
   const [, params] = useRoute("/blog/:id");
   const postId = params?.id ? parseInt(params.id) : 1;
-  
+
   const titleRef = useScrollAnimation();
   const contentRef = useScrollAnimation();
 
@@ -246,10 +246,10 @@ export default function BlogPost() {
 
   return (
     <div className="font-sans">
-      <Navigation />
-      
+      <AnimatedNav />
+
       {/* Hero Section */}
-      <section className="pt-20 pb-12 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section className="pt-20 pb-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
             <Link href="/blog">
@@ -259,19 +259,19 @@ export default function BlogPost() {
               </button>
             </Link>
           </div>
-          
-          <div ref={titleRef} className="scroll-fade">
+
+          <div ref={titleRef}>
             <div className="flex items-center justify-between mb-4">
               <span className={`${post.categoryColor} px-4 py-2 rounded-full text-sm font-medium`}>
                 {post.category}
               </span>
               <span className="text-gray-500 text-sm">{post.readTime}</span>
             </div>
-            
+
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-dark mb-6 leading-tight">
               {post.title}
             </h1>
-            
+
             <div className="flex items-center text-gray-600 mb-8">
               <span>By {post.author}</span>
               <span className="mx-3">•</span>
@@ -284,7 +284,7 @@ export default function BlogPost() {
       {/* Featured Image */}
       <section className="py-8 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <img 
+          <img
             src={post.image}
             alt={post.title}
             className="w-full h-96 object-cover rounded-2xl shadow-xl"
@@ -295,8 +295,8 @@ export default function BlogPost() {
       {/* Article Content */}
       <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div ref={contentRef} className="scroll-fade prose prose-lg max-w-none">
-            <div 
+          <div ref={contentRef} className="prose prose-lg max-w-none">
+            <div
               className="text-gray-700 leading-relaxed"
               dangerouslySetInnerHTML={{ __html: post.content }}
               style={{
@@ -305,11 +305,11 @@ export default function BlogPost() {
               }}
             />
           </div>
-          
+
           {/* Author Bio */}
           <div className="mt-12 p-6 bg-gray-50 rounded-2xl">
             <div className="flex items-center space-x-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-xl">
                   {post.author.split(' ').map(name => name[0]).join('')}
                 </span>
@@ -323,7 +323,7 @@ export default function BlogPost() {
               </div>
             </div>
           </div>
-          
+
           {/* Back to Blog */}
           <div className="mt-12 text-center">
             <Link href="/blog">

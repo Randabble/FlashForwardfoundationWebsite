@@ -13,16 +13,16 @@ export default function PartnershipSection() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 ref={titleRef} className="scroll-fade text-4xl sm:text-5xl font-bold text-dark mb-6">Local Roots, Global Reach</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
-          <p ref={descRef} className="scroll-fade text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 ref={titleRef} className="text-4xl sm:text-5xl font-bold text-dark mb-6">Local Roots, Global Reach</h2>
+          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+          <p ref={descRef} className="text-xl text-gray-600 max-w-3xl mx-auto">
             Our impact is made possible through strong partnerships with educational institutions, consulting firms, and community organizations.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div ref={partner1Ref} className="scroll-fade text-center p-6 border border-gray-200 rounded-xl hover:border-primary/30 hover:shadow-lg transition-all duration-300">
-            <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
+          <div ref={partner1Ref} className="text-center p-6 border border-gray-200 rounded-xl hover:border-primary/30 hover:shadow-lg transition-all duration-300">
+            <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
               <i className="fas fa-school text-white text-2xl"></i>
             </div>
             <h3 className="text-lg font-semibold text-dark mb-2">Sammamish High School</h3>
@@ -30,8 +30,8 @@ export default function PartnershipSection() {
             <p className="text-gray-500 text-xs mt-2">Engineering & prototyping partnership</p>
           </div>
 
-          <div ref={partner2Ref} className="scroll-fade text-center p-6 border border-gray-200 rounded-xl hover:border-primary/30 hover:shadow-lg transition-all duration-300">
-            <div className="w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-full flex items-center justify-center mx-auto mb-4">
+          <div ref={partner2Ref} className="text-center p-6 border border-gray-200 rounded-xl hover:border-primary/30 hover:shadow-lg transition-all duration-300">
+            <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
               <i className="fas fa-handshake text-white text-2xl"></i>
             </div>
             <h3 className="text-lg font-semibold text-dark mb-2">Thrive Consulting</h3>
@@ -39,8 +39,8 @@ export default function PartnershipSection() {
             <p className="text-gray-500 text-xs mt-2">Business development & scaling guidance</p>
           </div>
 
-          <div ref={partner3Ref} className="scroll-fade text-center p-6 border border-gray-200 rounded-xl hover:border-primary/30 hover:shadow-lg transition-all duration-300">
-            <div className="w-16 h-16 bg-gradient-to-br from-accent to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+          <div ref={partner3Ref} className="text-center p-6 border border-gray-200 rounded-xl hover:border-primary/30 hover:shadow-lg transition-all duration-300">
+            <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
               <i className="fas fa-globe-africa text-white text-2xl"></i>
             </div>
             <h3 className="text-lg font-semibold text-dark mb-2">Local Churches</h3>
@@ -49,9 +49,9 @@ export default function PartnershipSection() {
           </div>
         </div>
 
-        <div ref={testimonialRef} className="scroll-fade bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8">
+        <div ref={testimonialRef} className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8">
           <div className="flex flex-col lg:flex-row items-center gap-8">
-            <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center flex-shrink-0">
+            <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
               <i className="fas fa-quote-right text-white text-2xl"></i>
             </div>
             <div className="text-center lg:text-left">

@@ -58,39 +58,22 @@
     @apply font-sans antialiased bg-background text-foreground;
     font-family: 'Inter', sans-serif;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
 }
 
 @layer components {
-  .scroll-fade {
-    @apply transition-all duration-700 opacity-0 translate-y-8;
-  }
-  
-  .scroll-fade.visible {
-    @apply opacity-100 translate-y-0;
-  }
-  
-  .fade-in {
-    @apply transition-all duration-700 opacity-0 translate-y-8;
-  }
-  
-  .fade-in.visible {
-    @apply opacity-100 translate-y-0;
-  }
-  
   .nav-link {
     @apply relative;
   }
-  
+
   .nav-link::after {
     content: '';
-    @apply absolute w-full h-0.5 -bottom-1 left-0 scale-x-0 transition-transform duration-300;
-    background: linear-gradient(to right, hsl(37, 91%, 55%), hsl(142, 76%, 36%));
+    @apply absolute w-full h-0.5 -bottom-1 left-0 bg-primary scale-x-0 transition-transform duration-300;
   }
-  
+
   .nav-link:hover::after {
     @apply scale-x-100;
   }
@@ -134,28 +117,4 @@
 
 .text-dark {
   color: #1F2937;
-}
-
-.from-primary {
-  --tw-gradient-from: #F59E0B;
-}
-
-.to-accent {
-  --tw-gradient-to: #059669;
-}
-
-.from-secondary {
-  --tw-gradient-from: #1E40AF;
-}
-
-.to-primary {
-  --tw-gradient-to: #F59E0B;
-}
-
-.from-accent {
-  --tw-gradient-from: #059669;
-}
-
-.to-secondary {
-  --tw-gradient-to: #1E40AF;
 }

@@ -14,17 +14,17 @@ export default function ProductSection() {
         {/* Why Flashlights Section */}
         <div className="mb-20">
           <div className="text-center mb-16">
-            <h2 ref={titleRef} className="scroll-fade text-4xl sm:text-5xl font-bold text-dark mb-6">Why Flashlights Matter</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
-            <p ref={descRef} className="scroll-fade text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 ref={titleRef} className="text-4xl sm:text-5xl font-bold text-dark mb-6">Why Flashlights Matter</h2>
+            <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+            <p ref={descRef} className="text-xl text-gray-600 max-w-3xl mx-auto">
               Solar-powered flashlights address critical challenges faced by students in energy poverty, creating transformative benefits across health, environment, economics, and education.
             </p>
           </div>
 
-          <div ref={whyRef} className="scroll-fade grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div ref={whyRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Health Benefits */}
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mb-6">
+            <div className="bg-green-50 rounded-xl p-6 border border-green-100">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
                 <i className="fas fa-heart text-white text-2xl"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Health & Safety</h3>
@@ -49,8 +49,8 @@ export default function ProductSection() {
             </div>
 
             {/* Environmental Benefits */}
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-full flex items-center justify-center mb-6">
+            <div className="bg-blue-50 rounded-xl p-6 border border-blue-100">
+              <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-6">
                 <i className="fas fa-leaf text-white text-2xl"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Environmental Impact</h3>
@@ -75,8 +75,8 @@ export default function ProductSection() {
             </div>
 
             {/* Economic Benefits */}
-            <div className="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-xl p-6 border border-yellow-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-accent to-secondary rounded-full flex items-center justify-center mb-6">
+            <div className="bg-yellow-50 rounded-xl p-6 border border-yellow-100">
+              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mb-6">
                 <i className="fas fa-dollar-sign text-white text-2xl"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Economic Freedom</h3>
@@ -101,8 +101,8 @@ export default function ProductSection() {
             </div>
 
             {/* Educational Benefits */}
-            <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6 border border-purple-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mb-6">
+            <div className="bg-purple-50 rounded-xl p-6 border border-purple-100">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
                 <i className="fas fa-graduation-cap text-white text-2xl"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Extended Learning</h3>
@@ -128,7 +128,7 @@ export default function ProductSection() {
           </div>
 
           {/* Statistics Section */}
-          <div className="mt-16 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8">
+          <div className="mt-16 bg-gray-50 rounded-2xl p-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
                 <div className="text-4xl font-bold text-primary mb-2">685M</div>
@@ -149,16 +149,16 @@ export default function ProductSection() {
         {/* Product Features Section */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-dark mb-6">Our Solar Flashlight Design</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
+          <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Engineered by students for durability, efficiency, and ease of use in challenging environments.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div ref={featuresRef} className="scroll-fade space-y-8">
+          <div ref={featuresRef} className="space-y-8">
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                 <i className="fas fa-solar-panel text-white text-xl"></i>
               </div>
               <div>
@@ -168,7 +168,7 @@ export default function ProductSection() {
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-secondary to-primary rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
                 <i className="fas fa-battery-full text-white text-xl"></i>
               </div>
               <div>
@@ -178,7 +178,7 @@ export default function ProductSection() {
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-accent to-secondary rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
                 <i className="fas fa-lightbulb text-white text-xl"></i>
               </div>
               <div>
@@ -188,7 +188,7 @@ export default function ProductSection() {
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                 <i className="fas fa-shield-alt text-white text-xl"></i>
               </div>
               <div>
@@ -208,16 +208,16 @@ export default function ProductSection() {
             </div>
           </div>
 
-          <div ref={imageRef} className="scroll-fade">
+          <div ref={imageRef}>
             <div className="relative">
-              <img 
+              <img
                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600"
                 alt="Solar-powered flashlight prototype showing components"
                 className="rounded-2xl shadow-xl w-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl"></div>
+
             </div>
-            
+
             {/* <div className="mt-8 bg-gray-100 rounded-xl p-6 text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-cog text-white text-2xl"></i>

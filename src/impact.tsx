@@ -1,5 +1,5 @@
 import React from "react";
-import Navigation from "./components/Navigation";
+import AnimatedNav from "./components/AnimatedNav";
 import Footer from "./components/Footer";
 import { useScrollAnimation } from "./hooks/useScrollAnimation";
 import { useState, useEffect } from 'react';
@@ -44,15 +44,15 @@ export default function Impact() {
 
   return (
     <div className="font-sans">
-      <Navigation />
-      
+      <AnimatedNav />
+
       {/* Hero Section */}
-      {/* <section className="pt-20 pb-12 bg-gradient-to-br from-primary/5 to-accent/5">
+      {/* <section className="pt-20 pb-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 ref={titleRef} className="scroll-fade text-4xl sm:text-5xl lg:text-6xl font-bold text-dark mb-6">
+          <h1 ref={titleRef} className="text-4xl sm:text-5xl lg:text-6xl font-bold text-dark mb-6">
             Our Impact
           </h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 leading-relaxed">
             Lighting up education and transforming lives across off-grid communities in Ghana and beyond.
           </p>
@@ -63,22 +63,22 @@ export default function Impact() {
       {/* <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-8">
+            <div className="bg-gray-100 rounded-lg p-8">
               <div className="text-4xl font-bold text-primary mb-4">685M+</div>
               <div className="text-xl font-semibold text-gray-900 mb-2">People in Energy Poverty</div>
               <p className="text-gray-600">Worldwide without access to electricity</p>
             </div>
-            <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-8">
+            <div className="bg-gray-100 rounded-lg p-8">
               <div className="text-4xl font-bold text-primary mb-4">500+</div>
               <div className="text-xl font-semibold text-gray-900 mb-2">Flashlights Distributed</div>
               <p className="text-gray-600">Solar-powered lights delivered to students</p>
             </div>
-            <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-8">
+            <div className="bg-gray-100 rounded-lg p-8">
               <div className="text-4xl font-bold text-primary mb-4">15</div>
               <div className="text-xl font-semibold text-gray-900 mb-2">Schools Reached</div>
               <p className="text-gray-600">Educational institutions supported</p>
             </div>
-            <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-8">
+            <div className="bg-gray-100 rounded-lg p-8">
               <div className="text-4xl font-bold text-primary mb-4">2,000+</div>
               <div className="text-xl font-semibold text-gray-900 mb-2">Study Hours Enabled</div>
               <p className="text-gray-600">Additional learning time created</p>
@@ -90,7 +90,7 @@ export default function Impact() {
       {/* Testimonials Slideshow */}
       {/* <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 ref={testimonialsRef} className="scroll-fade text-3xl font-bold text-gray-900 mb-12 text-center">
+          <h2 ref={testimonialsRef} className="text-3xl font-bold text-gray-900 mb-12 text-center">
             Stories from Students
           </h2>
           
@@ -119,8 +119,8 @@ export default function Impact() {
               </div>
             </div>
              */}
-            {/* Navigation dots */}
-            {/* <div className="flex justify-center space-x-2 pb-6">
+      {/* Navigation dots */}
+      {/* <div className="flex justify-center space-x-2 pb-6">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
@@ -138,7 +138,7 @@ export default function Impact() {
       {/* How It Works */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 ref={howItWorksRef} className="scroll-fade text-3xl font-bold text-gray-900 mb-12 text-center">
+          <h2 ref={howItWorksRef} className="text-3xl font-bold text-gray-900 mb-12 text-center">
             How It Works
           </h2>
 
@@ -172,7 +172,7 @@ export default function Impact() {
               </div>
             </div>
             <div>
-              <img 
+              <img
                 src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                 alt="Solar flashlight technology"
                 className="rounded-lg shadow-lg"
@@ -183,7 +183,7 @@ export default function Impact() {
           {/* Assembly Process */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
             <div className="order-2 lg:order-1">
-              <img 
+              <img
                 src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                 alt="Students assembling flashlights"
                 className="rounded-lg shadow-lg"
@@ -250,7 +250,7 @@ export default function Impact() {
             {/* The SVG map section is commented out for now to prevent JSX parsing errors. */}
             {/*
             <div>
-              <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-8">
+              <div className="bg-gray-100 rounded-lg p-8">
                 <h4 className="text-xl font-bold text-gray-900 mb-6 text-center">Distribution Across Ghana</h4>
                 <div className="relative">
                   <svg viewBox="0 0 400 300" className="w-full h-64">
@@ -285,23 +285,23 @@ export default function Impact() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-br from-primary to-accent text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Help Us Scale Our Impact</h2>
           <p className="text-xl mb-8 opacity-90">
             Every donation helps us reach more students and expand our distribution network across Africa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://gofund.me/436b67db" 
-              target="_blank" 
+            <a
+              href="https://gofund.me/436b67db"
+              target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             >
               <i className="fas fa-heart mr-2"></i>
               Donate Now
             </a>
-            <a 
+            <a
               href="/contact"
               className="bg-white/20 backdrop-blur-sm text-white border-2 border-white/30 px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors duration-200"
             >
@@ -312,7 +312,7 @@ export default function Impact() {
         </div>
       </section>''
       {/* Video Showcase */}
-      <section className="py-20 bg-gradient-to-br from-secondary/5 to-accent/5">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-dark mb-6">
             Watch How Flash Forward Works
