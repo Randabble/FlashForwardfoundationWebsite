@@ -56,6 +56,7 @@ export default function Navigation() {
               <Link href="/shop"><span className="nav-link text-gray-700 hover:text-primary transition-colors duration-200 cursor-pointer">Shop</span></Link>
               <Link href="/blog"><span className="nav-link text-gray-700 hover:text-primary transition-colors duration-200 cursor-pointer">Blog</span></Link>
               <Link href="/impact"><span className="nav-link text-gray-700 hover:text-primary transition-colors duration-200 cursor-pointer">Our Impact</span></Link>
+              <Link href="/internship"><span className="nav-link text-gray-700 hover:text-primary transition-colors duration-200 cursor-pointer">Internship</span></Link>
 
               {/* Get Involved Dropdown */}
               <div
@@ -122,6 +123,7 @@ export default function Navigation() {
           <Link href="/shop"><div className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>Shop</div></Link>
           <Link href="/blog"><div className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>Blog</div></Link>
           <Link href="/impact"><div className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>Our Impact</div></Link>
+          <Link href="/internship"><div className="block px-3 py-2 text-gray-700 hover:text-primary w-full text-left" onClick={() => setIsMobileMenuOpen(false)}>Internship</div></Link>
 
           {/* Get Involved Mobile Section */}
           <div className="px-3 py-2">

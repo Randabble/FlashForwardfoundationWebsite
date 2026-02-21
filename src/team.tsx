@@ -44,33 +44,7 @@ export default function Team() {
       email: "#",
       linkedin: "#"
     },
-    {
-      name: "Muzaffar Hussain",
-      role: "Marketing & Outreach Lead",
-      bio: "Spreads the word through impactful campaigns that build awareness and support.",
-      longBio: "Muzaffar crafts compelling campaigns to amplify our mission. From social media strategy to community outreach, he helps tell the Flash Forward story in a way that inspires action.",
-      image: "/images/team/muzaffarface.jpeg",
-      email: "#",
-      linkedin: "#"
-    },
-    {
-      name: "Neil Mukherjee",
-      role: "Product Design Lead",
-      bio: "Leads solar flashlight development with a balance of function and simplicity.",
-      longBio: "Neil oversees the design of our flashlight, turning ideas into effective, manufacturable solutions. He blends creative design with technical precision to ensure the product is both beautiful and functional.",
-      image: "/images/team/neilface.jpeg",
-      email: "#",
-      linkedin: "#"
-    },
-    {
-      name: "Shreyas Prabhu",
-      role: "Engineering Lead",
-      bio: "Drives engineering projects with creativity and precision to push our mission forward.",
-      longBio: "Shreyas leads the technical development behind Flash Forward. From prototyping and product design to problem-solving complex challenges, he ensures our engineering work is both innovative and impactful.",
-      image: "/images/team/shreyasface.jpeg",
-      email: "#",
-      linkedin: "#"
-    }
+    
   ];
 
   return (

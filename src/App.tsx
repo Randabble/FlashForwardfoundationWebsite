@@ -20,6 +20,7 @@ import Checkout from "./checkout";
 import AdminLogin from "./admin/login";
 import BlogEditor from "./admin/blog-editor";
 import NotFound from "./not-found";
+import Internship from "./internship";
 
 function Router() {
   return (
@@ -36,6 +37,7 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/volunteer" component={Volunteer} />
       <Route path="/partner" component={Partner} />
+      <Route path="/internship" component={Internship} />
       <Route path="/admin/login" component={AdminLogin} />
       <Route path="/admin/blog-editor" component={BlogEditor} />
       <Route component={NotFound} />

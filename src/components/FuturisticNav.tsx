@@ -8,6 +8,7 @@ import {
     BarChart3,
     Users,
     Handshake,
+    Briefcase,
     Mail,
     DollarSign
 } from "lucide-react";
@@ -26,8 +27,9 @@ const items: NavItem[] = [
     { id: 3, icon: <BarChart3 size={20} />, label: "Impact", href: "/impact" },
     { id: 4, icon: <Users size={20} />, label: "Volunteer", href: "/volunteer" },
     { id: 5, icon: <Handshake size={20} />, label: "Partner", href: "/partner" },
-    { id: 6, icon: <Mail size={20} />, label: "Contact", href: "/contact" },
-    { id: 7, icon: <DollarSign size={20} />, label: "Donate", href: "https://gofund.me/436b67db" },
+    { id: 6, icon: <Briefcase size={20} />, label: "Internship", href: "/internship" },
+    { id: 7, icon: <Mail size={20} />, label: "Contact", href: "/contact" },
+    { id: 8, icon: <DollarSign size={20} />, label: "Donate", href: "https://gofund.me/436b67db" },
 ];
 
 const FuturisticNav = () => {

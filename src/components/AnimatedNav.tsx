@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'wouter';
 
-type NavKey = 'home' | 'about' | 'shop' | 'blog' | 'impact' | 'volunteer' | 'partner' | 'contact' | 'donate';
+type NavKey = 'home' | 'about' | 'shop' | 'blog' | 'impact' | 'volunteer' | 'partner' | 'internship' | 'contact' | 'donate';
 
 const icons = {
     home: (
@@ -48,6 +48,13 @@ const icons = {
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
             <circle cx="12" cy="7" r="4" />
             <path d="M16 11l2 2 4-4" />
+        </svg>
+    ),
+    internship: (
+        <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+            <rect x="3" y="7" width="18" height="13" rx="2" />
+            <path d="M16 3h-8a2 2 0 0 0-2 2v2h12V5a2 2 0 0 0-2-2z" />
+            <path d="M8 12h8" />
         </svg>
     ),
     contact: (
@@ -122,6 +129,7 @@ const AnimatedNav = () => {
         if (location.startsWith('/shop')) return 'shop';
         if (location.startsWith('/blog')) return 'blog';
         if (location.startsWith('/impact')) return 'impact';
+        if (location.startsWith('/internship')) return 'internship';
         if (location.startsWith('/volunteer')) return 'volunteer';
         if (location.startsWith('/partner')) return 'partner';
         if (location.startsWith('/contact')) return 'contact';
@@ -153,6 +161,7 @@ const AnimatedNav = () => {
                         <IconButton icon={icons.impact} label="Impact" active={active === 'impact'} href="/impact" />
                         <IconButton icon={icons.volunteer} label="Volunteer" active={active === 'volunteer'} href="/volunteer" />
                         <IconButton icon={icons.partner} label="Partner" active={active === 'partner'} href="/partner" />
+                        <IconButton icon={icons.internship} label="Internship" active={active === 'internship'} href="/internship" />
                         <IconButton icon={icons.contact} label="Contact" active={active === 'contact'} href="/contact" />
 
                         {/* Donate Button */}
