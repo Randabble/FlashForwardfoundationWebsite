@@ -13,7 +13,7 @@ export default function Team() {
       role: "President",
       bio: "Leads the team with vision and direction, passionate about combining technology and social impact.",
       longBio: "Sree leads our team with passion for using technology to address real-world issues. With a background in nonprofit leadership, he focuses on strategic planning, empowering team members, and aligning our mission with long-term impact.",
-      image: "/images/team/sreeface.jpeg",
+      image: "/images/team/sreeface2.jpeg",
       email: "sreekokkonda@gmail.com",
       linkedin: "https://www.linkedin.com/in/sree-kokkonda/"
     },
