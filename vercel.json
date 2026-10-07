@@ -4,18 +4,191 @@
   "buildCommand": "exit 0",
   "outputDirectory": ".",
   "cleanUrls": true,
-  "headers": [
+  "redirects": [
     {
-      "source": "/(.*\\.(png|jpg|jpeg|gif|webp|svg|ico|avif|mp4|webm|woff2?|otf|ttf|eot))",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
+      "source": "/mission",
+      "destination": "/about/",
+      "permanent": true
     },
     {
-      "source": "/(.*\\.(css|js))",
+      "source": "/mission.html",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/our-team",
+      "destination": "/about/team/",
+      "permanent": true
+    },
+    {
+      "source": "/our-team.html",
+      "destination": "/about/team/",
+      "permanent": true
+    },
+    {
+      "source": "/archived-members",
+      "destination": "/about/team/",
+      "permanent": true
+    },
+    {
+      "source": "/archived-members.html",
+      "destination": "/about/team/",
+      "permanent": true
+    },
+    {
+      "source": "/volunteering",
+      "destination": "/get-involved/volunteer/",
+      "permanent": true
+    },
+    {
+      "source": "/volunteering.html",
+      "destination": "/get-involved/volunteer/",
+      "permanent": true
+    },
+    {
+      "source": "/volunteer-adventures",
+      "destination": "/get-involved/volunteer/",
+      "permanent": true
+    },
+    {
+      "source": "/volunteer-adventures.html",
+      "destination": "/get-involved/volunteer/",
+      "permanent": true
+    },
+    {
+      "source": "/volunteer",
+      "destination": "/get-involved/volunteer/",
+      "permanent": true
+    },
+    {
+      "source": "/volunteer.html",
+      "destination": "/get-involved/volunteer/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us.html",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/ask-for-help",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/ask-for-help.html",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/donate-equipment",
+      "destination": "/donate/#equipment",
+      "permanent": true
+    },
+    {
+      "source": "/donate-equipment.html",
+      "destination": "/donate/#equipment",
+      "permanent": true
+    },
+    {
+      "source": "/dedicate-solar",
+      "destination": "/donate/#dedicate",
+      "permanent": true
+    },
+    {
+      "source": "/dedicate-solar.html",
+      "destination": "/donate/#dedicate",
+      "permanent": true
+    },
+    {
+      "source": "/Donate",
+      "destination": "/donate/",
+      "permanent": true
+    },
+    {
+      "source": "/Donate.html",
+      "destination": "/donate/",
+      "permanent": true
+    },
+    {
+      "source": "/donate/choose",
+      "destination": "/donate/",
+      "permanent": true
+    },
+    {
+      "source": "/donate/choose.html",
+      "destination": "/donate/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/terms-and-conditions",
+      "destination": "/terms/",
+      "permanent": true
+    },
+    {
+      "source": "/terms-and-conditions.html",
+      "destination": "/terms/",
+      "permanent": true
+    },
+    {
+      "source": "/events",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/events.html",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials.html",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/inspiring-stories",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/inspiring-stories.html",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/donate/choose/stories/:slug",
+      "destination": "/our-work/partners/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/impact/:slug",
+      "destination": "/our-work/partners/:slug/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*.(png|jpg|jpeg|gif|webp|svg|ico|avif|mp4|webm|woff2?|otf|ttf|eot))",
       "headers": [
         {
           "key": "Cache-Control",
